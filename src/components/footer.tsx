@@ -1,23 +1,98 @@
 'use client'
-import { Image } from '@nextui-org/react'
+
 import Link from 'next/link'
 import { Button } from './ui/button'
-import { ArrowUpRight, Instagram } from 'lucide-react'
+import { ArrowUpRight, Instagram, InstagramIcon } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
     <>
       <footer>
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="flex flex-col items-center py-14 sm:hidden">
+          <Link href={'/'} className="mb-12">
+            <div className="relative ml-2 h-24 w-[216px]">
+              <Image
+                loading="eager"
+                fill
+                style={{ objectFit: 'contain' }}
+                alt="NextUI hero Image"
+                src="/assets/logo.svg"
+              />
+            </div>
+          </Link>
+
+          <div className="mb-8 flex w-full flex-col items-start gap-2 px-4">
+            <span className="text-sm font-semibold">NAVIGATON</span>
+            <Link href={'/client-works'} className="w-full">
+              <Button className="h-20 w-full border border-black text-lg font-medium text-black">
+                Client Works
+              </Button>
+            </Link>
+            <Link href={'/portfolio'} className="w-full">
+              <Button className="h-20 w-full border border-black text-lg font-medium text-black">
+                Portfolio
+              </Button>
+            </Link>
+            <Link href={'/directing'} className="w-full">
+              <Button className="h-20 w-full border border-black text-lg font-medium text-black">
+                Directing
+              </Button>
+            </Link>
+          </div>
+
+          <hr className="mx-4 my-6 w-full border-gray-200 dark:border-gray-700 sm:mx-auto" />
+
+          <div className="mb-8 flex w-full flex-col items-start gap-2 px-4">
+            <span className="text-sm font-semibold">CONNECT</span>
+            <Link
+              href={'https://www.instagram.com/tonyozkan/reels/'}
+              className="w-full"
+            >
+              <Button className="h-20 w-full border border-black text-lg font-medium text-black">
+                <InstagramIcon />
+              </Button>
+            </Link>
+            <Link
+              href={'https://www.tiktok.com/@tonyozkan?lang=en'}
+              className="w-full"
+            >
+              <Button className="h-20 w-full border border-black text-lg font-medium text-black">
+                <div className="relative ml-2 h-16 w-[24px]">
+                  <Image
+                    loading="eager"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    alt="NextUI hero Image"
+                    src="/assets/tiktok.png"
+                  />
+                </div>
+              </Button>
+            </Link>
+            <Link
+              href={'https://www.tiktok.com/@tonyozkan?lang=en'}
+              className="w-full"
+            >
+              <Button className="w-full gap-2 border border-primary-400 py-8 uppercase text-primary-600 underline">
+                Get In Contact <ArrowUpRight size={16} />
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="mx-auto hidden w-full max-w-screen-xl p-4 py-6 sm:block lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-10 flex items-center  md:mb-0">
-              <Link href="/" className="flex items-center">
-                <Image
-                  width={'100%'}
-                  src="/assets/logo.svg"
-                  className="mr-3 h-8"
-                  alt="FlowBite Logo"
-                />
+              <Link href={'/'}>
+                <div className="relative ml-2 h-8 w-[116px]">
+                  <Image
+                    loading="eager"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    alt="NextUI hero Image"
+                    src="/assets/logo.svg"
+                  />
+                </div>
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-10">
