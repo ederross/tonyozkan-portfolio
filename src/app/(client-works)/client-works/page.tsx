@@ -1,3 +1,5 @@
+import Grid3Images from '@/components/clientWorks/grid3-images'
+
 export default function ClientWorks() {
   return (
     <main className="m-auto min-h-screen max-w-[1440px] bg-[#F6F6F6]">
@@ -19,6 +21,7 @@ export default function ClientWorks() {
             </p>
           </div>
         </div>
+        <Grid3Images />
       </section>
     </main>
   )
