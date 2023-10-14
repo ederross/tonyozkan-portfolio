@@ -13,7 +13,7 @@ export default function SideToSideContent() {
                 My approach
               </h2>
 
-              <p className="text-center font-light   sm:text-sm md:mb-6 md:text-left">
+              <p className="text-center text-xs font-light   sm:text-sm md:text-left">
                 My approach is based in a felt-perception of alignment. I am
                 often approached by those seeking a perspective within a body of
                 work that tells a story.I enjoy allowing freedom to fall within
