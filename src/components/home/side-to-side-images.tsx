@@ -13,7 +13,7 @@ export default function SideToSideImages() {
                 loading="eager"
                 fill
                 alt="NextUI hero Image"
-                src="/assets/tony.jpg"
+                src="/assets/headshot2.jpg"
               />
             </div>
             <h3 className="text-primary-700">Lorem ipsum Dolor</h3>
@@ -27,7 +27,7 @@ export default function SideToSideImages() {
                 fill
                 style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
-                src="/assets/tony.jpg"
+                src="/assets/headshot.jpg"
               />
             </div>
             <h3 className="text-primary-700">Lorem ipsum Dolor</h3>
