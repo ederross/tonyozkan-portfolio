@@ -67,7 +67,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="flex items-center justify-center ">
-                <Button className="border-primary-400 text-primary-600 gap-2 border py-8 uppercase underline">
+                <Button className="gap-2 border border-primary-400 py-8 uppercase text-primary-600 underline">
                   Get In Contact <ArrowUpRight size={16} />
                 </Button>
               </div>

@@ -40,17 +40,17 @@ export default function Navbar() {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="flex flex-col items-center gap-0  border-none bg-transparent p-0 shadow-none">
                 <Link href={'/client-works'}>
-                  <DropdownMenuItem className="hover:scale-80 transition-all ease-in-out hover:opacity-50">
+                  <DropdownMenuItem className="transition-all ease-in-out hover:scale-80 hover:opacity-50">
                     Clients Works
                   </DropdownMenuItem>
                 </Link>
                 <Link href={'/portfolio'}>
-                  <DropdownMenuItem className="hover:scale-80 transition-all ease-in-out hover:opacity-50">
+                  <DropdownMenuItem className="transition-all ease-in-out hover:scale-80 hover:opacity-50">
                     Portfolio
                   </DropdownMenuItem>
                 </Link>
                 <Link href={'/directing'}>
-                  <DropdownMenuItem className="hover:scale-80 transition-all ease-in-out hover:opacity-50">
+                  <DropdownMenuItem className="transition-all ease-in-out hover:scale-80 hover:opacity-50">
                     Directing
                   </DropdownMenuItem>
                 </Link>
