@@ -12,6 +12,7 @@ export default function SideToSideImages() {
               <Image
                 loading="eager"
                 fill
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/headshot2.jpg"
               />
