@@ -45,6 +45,11 @@ export default function Navbar() {
                 />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="flex flex-col items-center gap-0  border-none bg-transparent p-0 shadow-none">
+                <Link href={'/'}>
+                  <DropdownMenuItem className="transition-all ease-in-out hover:scale-80 hover:opacity-50">
+                    Home
+                  </DropdownMenuItem>
+                </Link>
                 <Link href={'/client-works'}>
                   <DropdownMenuItem className="transition-all ease-in-out hover:scale-80 hover:opacity-50">
                     Clients Works
