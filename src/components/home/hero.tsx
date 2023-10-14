@@ -14,7 +14,7 @@ export default function VideoPlayer() {
       <div className="flex h-screen items-center justify-center">
         {isVideoPlayerMounted ? (
           <video autoPlay muted loop style={{ width: '100%', height: '500px' }}>
-            <source src="https://giistyxelor.s3.amazonaws.com/giists/video/video0cP3w019TiZYYcUy22WY.mp4" />
+            <source src="/assets/videos/unexpressed-feelings.mp4" />
           </video>
         ) : (
           <Loader2 className="animate-spin" />
