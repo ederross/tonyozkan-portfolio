@@ -7,28 +7,34 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
 import { Dot } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
+  const pathName = usePathname()
+  const isClientWorks = pathName.includes('/client-works')
+
   return (
     <>
       <nav className="fixed z-10 w-full">
         <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between pt-4 max-xl:px-4">
-          <Link href={'/'}>
-            <div className="relative h-8 w-[116px]">
-              <Image
-                loading="eager"
-                layout="fill"
-                objectFit="contain"
-                alt="NextUI hero Image"
-                src="/assets/logo.svg"
-              />
-            </div>
-          </Link>
+          {!isClientWorks ? (
+            <Link href={'/'}>
+              <div className="relative h-8 w-[116px]">
+                <Image
+                  loading="eager"
+                  layout="fill"
+                  objectFit="contain"
+                  alt="NextUI hero Image"
+                  src="/assets/logo.svg"
+                />
+              </div>
+            </Link>
+          ) : (
+            <div></div>
+          )}
 
           <div className="md:block md:w-auto">
             <DropdownMenu>
