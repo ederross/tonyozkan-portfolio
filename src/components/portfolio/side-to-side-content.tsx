@@ -78,9 +78,8 @@ export default function SideToSideContent() {
               allPhotos?.map((data, key) => (
                 <div key={key} className="relative h-[300px] overflow-hidden">
                   <Image
-                    loading="eager"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: 'contain' }}
                     alt="NextUI hero Image"
                     src={data as string}
                   />
