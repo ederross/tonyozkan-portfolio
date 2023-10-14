@@ -23,6 +23,9 @@ dependencies:
   firebase:
     specifier: ^10.5.0
     version: 10.5.0
+  fitty:
+    specifier: ^2.3.7
+    version: 2.3.7
   framer-motion:
     specifier: ^10.16.4
     version: 10.16.4(react-dom@18.2.0)(react@18.2.0)
@@ -4727,6 +4730,10 @@ packages:
     transitivePeerDependencies:
       - '@react-native-async-storage/async-storage'
       - encoding
+    dev: false
+
+  /fitty@2.3.7:
+    resolution: {integrity: sha512-yucQBzDD8sRa8EXfHu4/h9vNDFHUXpYtC+nydtBRfLSjzToCEvacy4qiBJyihgUVrqpXB+Kp5kWCbROSrePd2g==}
     dev: false
 
   /flat-cache@3.1.1:
