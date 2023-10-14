@@ -25,51 +25,51 @@ export default function SideToSideContent() {
           </div>
 
           <div className="col-span-2 grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-2">
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/portfolio/5.jpg"
               />
             </div>
 
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/portfolio/2.jpg"
               />
             </div>
 
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/portfolio/3.jpg"
               />
             </div>
 
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/portfolio/4.jpg"
               />
             </div>
 
-            <div className="relative h-[400px]">
+            <div className="relative h-[400px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/portfolio/1.jpg"
               />

@@ -26,7 +26,7 @@ export default function Navbar() {
                 <Image
                   loading="eager"
                   fill
-                  objectFit="contain"
+                  style={{ objectFit: 'contain' }}
                   alt="NextUI hero Image"
                   src="/assets/logo.svg"
                 />

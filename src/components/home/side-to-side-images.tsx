@@ -11,8 +11,7 @@ export default function SideToSideImages() {
             <div className="relative h-[600px]">
               <Image
                 loading="eager"
-                layout="fill"
-                objectFit="cover"
+                fill
                 alt="NextUI hero Image"
                 src="/assets/tony.jpg"
               />
@@ -25,8 +24,8 @@ export default function SideToSideImages() {
             <div className="relative h-[600px]">
               <Image
                 loading="eager"
-                layout="fill"
-                objectFit="cover"
+                fill
+                style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
                 src="/assets/tony.jpg"
               />
