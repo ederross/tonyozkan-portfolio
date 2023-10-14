@@ -7,7 +7,7 @@ export default function Grid3Images() {
         <Image
           loading="eager"
           fill
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           alt="NextUI hero Image"
           src="/assets/headshot.jpg"
         />
@@ -17,7 +17,7 @@ export default function Grid3Images() {
         <Image
           loading="eager"
           fill
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           alt="NextUI hero Image"
           src="/assets/headshot.jpg"
         />
@@ -27,7 +27,7 @@ export default function Grid3Images() {
         <Image
           loading="eager"
           fill
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           alt="NextUI hero Image"
           src="/assets/headshot.jpg"
         />
@@ -37,7 +37,7 @@ export default function Grid3Images() {
         <Image
           loading="eager"
           fill
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           alt="NextUI hero Image"
           src="/assets/headshot.jpg"
         />
@@ -47,7 +47,7 @@ export default function Grid3Images() {
         <Image
           loading="eager"
           fill
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           alt="NextUI hero Image"
           src="/assets/headshot.jpg"
         />
