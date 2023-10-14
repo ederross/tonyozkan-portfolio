@@ -6,7 +6,7 @@ export default function Grid3Images() {
       <div className="relative h-[600px]">
         <Image
           loading="eager"
-          layout="fill"
+          fill
           objectFit="cover"
           alt="NextUI hero Image"
           src="/assets/portfolio/5.jpg"
@@ -16,7 +16,7 @@ export default function Grid3Images() {
       <div className="relative h-[600px]">
         <Image
           loading="eager"
-          layout="fill"
+          fill
           objectFit="cover"
           alt="NextUI hero Image"
           src="/assets/portfolio/2.jpg"
@@ -26,7 +26,7 @@ export default function Grid3Images() {
       <div className="relative h-[600px]">
         <Image
           loading="eager"
-          layout="fill"
+          fill
           objectFit="cover"
           alt="NextUI hero Image"
           src="/assets/portfolio/3.jpg"
@@ -36,7 +36,7 @@ export default function Grid3Images() {
       <div className="relative h-[600px]">
         <Image
           loading="eager"
-          layout="fill"
+          fill
           objectFit="cover"
           alt="NextUI hero Image"
           src="/assets/portfolio/4.jpg"
@@ -46,7 +46,7 @@ export default function Grid3Images() {
       <div className="relative h-[600px]">
         <Image
           loading="eager"
-          layout="fill"
+          fill
           objectFit="cover"
           alt="NextUI hero Image"
           src="/assets/portfolio/1.jpg"

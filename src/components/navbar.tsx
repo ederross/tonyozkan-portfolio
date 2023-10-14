@@ -25,7 +25,7 @@ export default function Navbar() {
               <div className="relative h-8 w-[116px]">
                 <Image
                   loading="eager"
-                  layout="fill"
+                  fill
                   objectFit="contain"
                   alt="NextUI hero Image"
                   src="/assets/logo.svg"
