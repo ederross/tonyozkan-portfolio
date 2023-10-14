@@ -14,15 +14,16 @@ import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
   const pathName = usePathname()
-  const isClientWorks = pathName.includes('/client-works')
+  const isNoLogoPage =
+    pathName.includes('/client-works') || pathName.includes('/directing')
 
   return (
     <>
       <nav className="fixed z-10 w-full">
-        <div className="mx-auto flex max-w-[1200px] flex-wrap items-center justify-between pt-4 max-xl:px-4">
-          {!isClientWorks ? (
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between pt-4 max-xl:px-4">
+          {!isNoLogoPage ? (
             <Link href={'/'}>
-              <div className="relative h-8 w-[116px]">
+              <div className="relative ml-2 h-8 w-[116px]">
                 <Image
                   loading="eager"
                   fill
@@ -38,7 +39,7 @@ export default function Navbar() {
 
           <div className="md:block md:w-auto">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex h-14 w-14 select-none items-center  rounded-lg focus:outline-none focus:outline-offset-0 focus-visible:outline-none">
+              <DropdownMenuTrigger className="flex h-14 w-14 select-none items-center rounded-lg focus:outline-none focus:outline-offset-0 focus-visible:outline-none">
                 <Dot
                   size={64}
                   className="transition-all ease-in-out hover:h-14 hover:w-14"

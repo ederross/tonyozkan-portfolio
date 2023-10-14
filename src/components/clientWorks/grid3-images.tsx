@@ -9,7 +9,7 @@ export default function Grid3Images() {
           fill
           objectFit="cover"
           alt="NextUI hero Image"
-          src="/assets/portfolio/5.jpg"
+          src="/assets/headshot.jpg"
         />
       </div>
 
@@ -19,7 +19,7 @@ export default function Grid3Images() {
           fill
           objectFit="cover"
           alt="NextUI hero Image"
-          src="/assets/portfolio/2.jpg"
+          src="/assets/headshot.jpg"
         />
       </div>
 
@@ -29,7 +29,7 @@ export default function Grid3Images() {
           fill
           objectFit="cover"
           alt="NextUI hero Image"
-          src="/assets/portfolio/3.jpg"
+          src="/assets/headshot.jpg"
         />
       </div>
 
@@ -39,7 +39,7 @@ export default function Grid3Images() {
           fill
           objectFit="cover"
           alt="NextUI hero Image"
-          src="/assets/portfolio/4.jpg"
+          src="/assets/headshot.jpg"
         />
       </div>
 
@@ -49,7 +49,7 @@ export default function Grid3Images() {
           fill
           objectFit="cover"
           alt="NextUI hero Image"
-          src="/assets/portfolio/1.jpg"
+          src="/assets/headshot.jpg"
         />
       </div>
     </div>

@@ -13,7 +13,7 @@ export default function SideToSideContent() {
                 My approach
               </h2>
 
-              <p className="text-center text-xs font-light   sm:text-sm md:text-left">
+              <p className="text-center text-xs font-light   sm:text-xs md:text-left">
                 My approach is based in a felt-perception of alignment. I am
                 often approached by those seeking a perspective within a body of
                 work that tells a story.I enjoy allowing freedom to fall within
@@ -25,53 +25,53 @@ export default function SideToSideContent() {
           </div>
 
           <div className="col-span-2 grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-2">
-            <div className="relative h-[400px] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
                 style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
-                src="/assets/portfolio/5.jpg"
+                src="/assets/headshot.jpg"
               />
             </div>
 
-            <div className="relative h-[400px] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
                 style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
-                src="/assets/portfolio/2.jpg"
+                src="/assets/headshot.jpg"
               />
             </div>
 
-            <div className="relative h-[400px] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
                 style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
-                src="/assets/portfolio/3.jpg"
+                src="/assets/headshot.jpg"
               />
             </div>
 
-            <div className="relative h-[400px] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
                 style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
-                src="/assets/portfolio/4.jpg"
+                src="/assets/headshot.jpg"
               />
             </div>
 
-            <div className="relative h-[400px] overflow-hidden">
+            <div className="relative h-[300px] overflow-hidden">
               <Image
                 loading="eager"
                 fill
                 style={{ objectFit: 'cover' }}
                 alt="NextUI hero Image"
-                src="/assets/portfolio/1.jpg"
+                src="/assets/headshot.jpg"
               />
             </div>
           </div>

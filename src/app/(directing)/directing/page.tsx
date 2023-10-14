@@ -1,13 +1,13 @@
-import Grid3Images from '@/components/clientWorks/grid3-images'
+import VideosDynamic from '@/components/directing/video-dynamic'
 
-export default function ClientWorks() {
+export default function Directing() {
   return (
     <main className="m-auto min-h-screen max-w-[1440px] bg-[#F6F6F6]">
       <section className="mx-auto flex max-w-[1000px] flex-col overflow-hidden">
         <div className="mt-24 flex w-full flex-col justify-between gap-4 border-b-1 px-4 pb-8 lg:flex-row">
           <div className="flex-1">
             <h2 className="text-3xl  font-normal tracking-tighter">
-              Client Works
+              Directing
             </h2>
           </div>
           <div className="flex-1">
@@ -21,7 +21,7 @@ export default function ClientWorks() {
             </p>
           </div>
         </div>
-        <Grid3Images />
+        <VideosDynamic />
       </section>
     </main>
   )
