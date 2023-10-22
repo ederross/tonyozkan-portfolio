@@ -21,7 +21,7 @@ export default function ClientDetails({
 }: Props) {
   return (
     <>
-      <section className="fixed left-0 z-50  mx-auto h-screen w-full bg-white">
+      <section className="fixed left-0 z-50  mx-auto h-screen w-full overflow-auto bg-white">
         <div className="m-auto w-full max-w-[1000px] ">
           <div className="mt-8 flex min-h-[32px] w-full justify-between py-4">
             <div className="w-1/2">

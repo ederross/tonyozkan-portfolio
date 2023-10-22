@@ -36,7 +36,7 @@ const Cursor: React.FC<{ cursorVariant: string }> = ({ cursorVariant }) => {
   return (
     <>
       <motion.div
-        className="pointer-events-none fixed left-0 top-[1000px] z-[9999] hidden h-5 w-5 rounded-full bg-slate-800 sm:block"
+        className="pointer-events-none fixed left-0 top-[1000px] z-[9999] hidden h-5 w-5 rounded-full bg-slate-800 sm:hidden"
         variants={variants}
         animate={cursorVariant}
       ></motion.div>
