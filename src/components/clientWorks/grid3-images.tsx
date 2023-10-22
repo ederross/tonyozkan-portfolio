@@ -17,6 +17,7 @@ export default function Grid3Images() {
   const [isCoverHovered, setIsCoverHovered] = useState(false)
 
   const [selectedClientURL, setSelectedClientURL] = useState<IClientWork>()
+  const [hoveredSlug, setHoveredSlug] = useState('')
 
   useEffect(() => {
     if (clientName) {
@@ -28,11 +29,12 @@ export default function Grid3Images() {
     }
   }, [clientName, selectedClientURL])
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (slug: string) => {
+    setHoveredSlug(slug)
     setIsCoverHovered(true)
   }
-
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (slug: string) => {
+    setHoveredSlug(slug)
     setIsCoverHovered(false)
   }
 
@@ -55,42 +57,41 @@ export default function Grid3Images() {
                 {data.videoCover ? (
                   <>
                     <div
-                      className="max-h-[400px] overflow-hidden"
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
+                      className="max-h-[400px] overflow-hidden duration-1000 ease-out hover:scale-150 "
+                      onMouseEnter={() => handleMouseEnter(data.slug)}
+                      onMouseLeave={() => handleMouseLeave(data.slug)}
                     >
-                      {!isCoverHovered ? (
-                        <>
-                          <motion.div
-                            transition={{
-                              ease: 'easeInOut',
-                              delay: 3,
-                            }}
-                          >
-                            <Image
-                              loading="eager"
-                              fill
-                              style={{ objectFit: 'contain' }}
-                              className="duration-1000 ease-out hover:scale-125"
-                              alt="NextUI hero Image"
-                              src={
-                                'https://ucedede2fec3df8677d00851efca.previews.dropboxusercontent.com/p/thumb/ACGBr6iN0Cq3WorZgeDkUycpeOyPzigluQ6m3RpcnVipRd1p5VmY6T1jxPaxA8BIH4lrhj2yvYc2tSKIkPvPwrojUl_ieiRtgMhy_DZqInQGGQR5zLPHph_00PJ19S0WKVpddB2TbLUGlr7bslctfRtuXEq4a_e26ptvU2oEU7mbIm7rlD_kSnuUJSI7Kj45tWWrf0Q494lf48-r3S7Q8-NcESDnX4Hh7BtPsuYS9Bs7fGGJJwlBgC8aMBldOhxnNmcWmVYQadZhac8UQiMVDbL7ppaKaHUQ27_P6qhBO-ZOv16kmePD639tLsauCLaFx_EINy813aey0ZKDQhvjUhRRhHgDBngJ9tmnXmiYm8bmz_AtL1JvrjiSr63UZiIvi3Pn0EMqKr75LFmer_PK4Vl38l9Lr2EeCj4Ia71LLtzyBQ/p.jpeg'
-                              }
-                            />
-                          </motion.div>
-                        </>
-                      ) : (
-                        <motion.video
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1, scale: 4 }}
-                          style={{ width: '100%', height: '400px' }}
-                          autoPlay
-                          muted
-                          controls={false}
+                      {/* <>
+                        <motion.div
+                          transition={{
+                            ease: 'easeInOut',
+                            delay: 3,
+                          }}
                         >
-                          <source src={data.videoCover} type="video/mp4" />
-                        </motion.video>
-                      )}
+                          <Image
+                            loading="eager"
+                            fill
+                            style={{ objectFit: 'contain' }}
+                            className="duration-1000 ease-out hover:scale-125"
+                            alt="NextUI hero Image"
+                            src={data.cover}
+                          />
+                        </motion.div>
+                      </> */}
+
+                      {/* {hoveredSlug === data.slug && ( */}
+                      <motion.video
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1, scale: 3 }}
+                        style={{ width: '100%', height: '400px' }}
+                        autoPlay
+                        loop
+                        muted
+                        controls={false}
+                      >
+                        <source src={data.videoCover} type="video/mp4" />
+                      </motion.video>
+                      {/* )} */}
                     </div>
                   </>
                 ) : (

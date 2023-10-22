@@ -8,7 +8,7 @@ declare global {
     cover: string
     videoCover?: string
     images: string[]
-    videos: never[]
+    videos?: string[]
   }
   //* Types
 

@@ -8,9 +8,10 @@ import { useAnimate, usePresence, motion } from 'framer-motion'
 
 interface Client {
   name: string
-  cover: string
   images: string[]
-  videos: never[]
+  cover: string
+  videoCover?: string
+  videos?: string[]
 }
 
 interface Props {
@@ -24,7 +25,7 @@ export default function ClientDetails({
 }: Props) {
   return (
     <>
-      <section className="fixed left-0 z-50  mx-auto h-screen w-full overflow-auto bg-white">
+      <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto bg-white pb-40">
         <div className="m-auto w-full max-w-[1000px] ">
           <div className="mt-8 flex min-h-[32px] w-full justify-between py-4">
             <div className="w-1/2">
