@@ -39,7 +39,7 @@ export default function ClientDetails({
           </div>
           <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
             {selectedClient?.images.map((data, key) => (
-              <div key={key} className="relative h-[500px]">
+              <div key={key + Math.random()} className="relative h-[500px]">
                 <Image
                   loading="eager"
                   fill

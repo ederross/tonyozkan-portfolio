@@ -49,54 +49,49 @@ export default function Grid3Images() {
       <div className="px-4">
         <div className="col-span-2 my-24 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
           {clientWorks.map((data, key) => (
-            <>
-              <Link href={`?client=${data.slug}`}>
-                <div
-                  key={key}
-                  className="relative min-h-[400px] cursor-pointer overflow-hidden bg-slate-50"
-                >
-                  {data.videoCover ? (
-                    <>
-                      <div
-                        className="max-h-[400px] overflow-hidden"
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      >
-                        {!isCoverHovered && (
-                          <Image
-                            loading="eager"
-                            fill
-                            style={{ objectFit: 'contain' }}
-                            className="duration-300 ease-out hover:scale-125"
-                            alt="NextUI hero Image"
-                            src={data.cover}
-                          />
-                        )}
-                        {isCoverHovered && (
-                          <video
-                            style={{ width: '100%', height: '400px', scale: 3 }}
-                            autoPlay
-                            muted
-                            controls={false}
-                          >
-                            <source src={data.videoCover} type="video/mp4" />
-                          </video>
-                        )}
-                      </div>
-                    </>
-                  ) : (
-                    <Image
-                      loading="eager"
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      className="duration-300 ease-out hover:scale-125"
-                      alt="NextUI hero Image"
-                      src={data.cover}
-                    />
-                  )}
-                </div>
-              </Link>
-            </>
+            <Link key={key} href={`?client=${data.slug}`}>
+              <div className="relative min-h-[400px] cursor-pointer overflow-hidden bg-slate-50">
+                {data.videoCover ? (
+                  <>
+                    <div
+                      className="max-h-[400px] overflow-hidden"
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      {!isCoverHovered && (
+                        <Image
+                          loading="eager"
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="duration-300 ease-out hover:scale-125"
+                          alt="NextUI hero Image"
+                          src={data.cover}
+                        />
+                      )}
+                      {isCoverHovered && (
+                        <video
+                          style={{ width: '100%', height: '400px', scale: 3 }}
+                          autoPlay
+                          muted
+                          controls={false}
+                        >
+                          <source src={data.videoCover} type="video/mp4" />
+                        </video>
+                      )}
+                    </div>
+                  </>
+                ) : (
+                  <Image
+                    loading="eager"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    className="duration-300 ease-out hover:scale-125"
+                    alt="NextUI hero Image"
+                    src={data.cover}
+                  />
+                )}
+              </div>
+            </Link>
           ))}
         </div>
       </div>
