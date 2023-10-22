@@ -16,9 +16,7 @@ export default function SideToSideImages() {
                 alt="NextUI hero Image"
                 src="/assets/headshot2.jpg"
               />
-            </div>
-            <h3 className="text-primary-700">Lorem ipsum Dolor</h3>
-            <span className="font-light text-primary-700">dasdasd</span>
+            </div>{' '}
           </div>
 
           <div className="flex flex-col ">
@@ -31,8 +29,6 @@ export default function SideToSideImages() {
                 src="/assets/headshot.jpg"
               />
             </div>
-            <h3 className="text-primary-700">Lorem ipsum Dolor</h3>
-            <span className="font-light text-primary-700">dasdasd</span>
           </div>
         </div>
       </div>

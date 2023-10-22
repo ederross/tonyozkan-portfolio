@@ -34,9 +34,9 @@ export default function Footer() {
                 Portfolio
               </Button>
             </Link>
-            <Link href={'/directing'} className="w-full">
+            <Link href={'/film'} className="w-full">
               <Button className="h-20 w-full border border-black text-lg font-medium text-black">
-                Directing
+                Film
               </Button>
             </Link>
           </div>
@@ -112,8 +112,8 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/directing" className="hover:underline">
-                      Directing
+                    <Link href="/film" className="hover:underline">
+                      Film
                     </Link>
                   </li>
                 </ul>

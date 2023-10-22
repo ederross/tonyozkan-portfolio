@@ -61,9 +61,9 @@ export default function Navbar() {
                     Portfolio
                   </DropdownMenuItem>
                 </Link>
-                <Link href={'/directing'}>
+                <Link href={'/film'}>
                   <DropdownMenuItem className="transition-all ease-in-out hover:scale-80 hover:opacity-50">
-                    Directing
+                    Film
                   </DropdownMenuItem>
                 </Link>
               </DropdownMenuContent>
