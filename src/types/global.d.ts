@@ -1,13 +1,12 @@
-import { Dispatch } from 'react'
-import { DateRange } from 'react-day-picker'
-
 export {}
 
 declare global {
   //* Interfaces
   interface IClientWork {
+    slug: string
     name: string
     cover: string
+    videoCover?: string
     images: string[]
     videos: never[]
   }
