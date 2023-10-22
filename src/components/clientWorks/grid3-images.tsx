@@ -8,6 +8,7 @@ import { clientWorks } from './data'
 import ClientDetails from './ClientDetails'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
+import { useAnimate, usePresence, motion } from 'framer-motion'
 
 export default function Grid3Images() {
   const searchParams = useSearchParams()
@@ -58,37 +59,53 @@ export default function Grid3Images() {
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
                     >
-                      {!isCoverHovered && (
-                        <Image
-                          loading="eager"
-                          fill
-                          style={{ objectFit: 'contain' }}
-                          className="duration-300 ease-out hover:scale-125"
-                          alt="NextUI hero Image"
-                          src={data.cover}
-                        />
-                      )}
-                      {isCoverHovered && (
-                        <video
-                          style={{ width: '100%', height: '400px', scale: 3 }}
+                      {!isCoverHovered ? (
+                        <>
+                          <motion.div
+                            transition={{
+                              ease: 'easeInOut',
+                              delay: 3,
+                            }}
+                          >
+                            <Image
+                              loading="eager"
+                              fill
+                              style={{ objectFit: 'contain' }}
+                              className="duration-300 ease-out hover:scale-125"
+                              alt="NextUI hero Image"
+                              src={
+                                'https://ucedede2fec3df8677d00851efca.previews.dropboxusercontent.com/p/thumb/ACGBr6iN0Cq3WorZgeDkUycpeOyPzigluQ6m3RpcnVipRd1p5VmY6T1jxPaxA8BIH4lrhj2yvYc2tSKIkPvPwrojUl_ieiRtgMhy_DZqInQGGQR5zLPHph_00PJ19S0WKVpddB2TbLUGlr7bslctfRtuXEq4a_e26ptvU2oEU7mbIm7rlD_kSnuUJSI7Kj45tWWrf0Q494lf48-r3S7Q8-NcESDnX4Hh7BtPsuYS9Bs7fGGJJwlBgC8aMBldOhxnNmcWmVYQadZhac8UQiMVDbL7ppaKaHUQ27_P6qhBO-ZOv16kmePD639tLsauCLaFx_EINy813aey0ZKDQhvjUhRRhHgDBngJ9tmnXmiYm8bmz_AtL1JvrjiSr63UZiIvi3Pn0EMqKr75LFmer_PK4Vl38l9Lr2EeCj4Ia71LLtzyBQ/p.jpeg'
+                              }
+                            />
+                          </motion.div>
+                        </>
+                      ) : (
+                        <motion.video
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1, scale: 4 }}
+                          style={{ width: '100%', height: '400px' }}
                           autoPlay
                           muted
                           controls={false}
                         >
                           <source src={data.videoCover} type="video/mp4" />
-                        </video>
+                        </motion.video>
                       )}
                     </div>
                   </>
                 ) : (
-                  <Image
-                    loading="eager"
-                    fill
-                    style={{ objectFit: 'contain' }}
-                    className="duration-300 ease-out hover:scale-125"
-                    alt="NextUI hero Image"
-                    src={data.cover}
-                  />
+                  <>
+                    <div>
+                      <Image
+                        loading="eager"
+                        fill
+                        style={{ objectFit: 'contain' }}
+                        className="duration-300 ease-out hover:scale-125"
+                        alt="NextUI hero Image"
+                        src={data.cover}
+                      />
+                    </div>
+                  </>
                 )}
               </div>
             </Link>

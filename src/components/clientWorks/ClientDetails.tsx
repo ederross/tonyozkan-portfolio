@@ -1,7 +1,10 @@
+'use client'
+import { Dispatch, SetStateAction, useEffect } from 'react'
+
 import { X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Dispatch, SetStateAction } from 'react'
+import { useAnimate, usePresence, motion } from 'framer-motion'
 
 interface Client {
   name: string
@@ -39,15 +42,20 @@ export default function ClientDetails({
           </div>
           <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
             {selectedClient?.images.map((data, key) => (
-              <div key={key + Math.random()} className="relative h-[500px]">
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 10 }}
+                transition={{ ease: 'easeInOut', duration: 2 }}
+                key={key + Math.random()}
+                className="relative h-[500px]"
+              >
                 <Image
-                  loading="eager"
                   fill
                   style={{ objectFit: 'cover' }}
                   alt="NextUI hero Image"
                   src={data}
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
