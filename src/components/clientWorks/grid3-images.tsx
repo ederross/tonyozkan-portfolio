@@ -71,7 +71,7 @@ export default function Grid3Images() {
                               loading="eager"
                               fill
                               style={{ objectFit: 'contain' }}
-                              className="duration-300 ease-out hover:scale-125"
+                              className="duration-1000 ease-out hover:scale-125"
                               alt="NextUI hero Image"
                               src={
                                 'https://ucedede2fec3df8677d00851efca.previews.dropboxusercontent.com/p/thumb/ACGBr6iN0Cq3WorZgeDkUycpeOyPzigluQ6m3RpcnVipRd1p5VmY6T1jxPaxA8BIH4lrhj2yvYc2tSKIkPvPwrojUl_ieiRtgMhy_DZqInQGGQR5zLPHph_00PJ19S0WKVpddB2TbLUGlr7bslctfRtuXEq4a_e26ptvU2oEU7mbIm7rlD_kSnuUJSI7Kj45tWWrf0Q494lf48-r3S7Q8-NcESDnX4Hh7BtPsuYS9Bs7fGGJJwlBgC8aMBldOhxnNmcWmVYQadZhac8UQiMVDbL7ppaKaHUQ27_P6qhBO-ZOv16kmePD639tLsauCLaFx_EINy813aey0ZKDQhvjUhRRhHgDBngJ9tmnXmiYm8bmz_AtL1JvrjiSr63UZiIvi3Pn0EMqKr75LFmer_PK4Vl38l9Lr2EeCj4Ia71LLtzyBQ/p.jpeg'
@@ -100,7 +100,7 @@ export default function Grid3Images() {
                         loading="eager"
                         fill
                         style={{ objectFit: 'contain' }}
-                        className="duration-300 ease-out hover:scale-125"
+                        className="duration-1000 ease-out hover:scale-125"
                         alt="NextUI hero Image"
                         src={data.cover}
                       />
