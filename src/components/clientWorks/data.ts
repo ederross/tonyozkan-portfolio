@@ -4,7 +4,8 @@ export const clientWorks = [
     name: 'CK everyone ed',
     cover:
       'https://ucad3841e3474cf35ce848140990.previews.dropboxusercontent.com/p/thumb/ACH2y7z7Zf-bMsRu58shzSCVt5TGMIMDhFc868InS8A8AfoSz8g_bxSifK_UOrZm1dvdBnKxVIFempvBG9B0MxcIr2qOuWCbPxmwBk36W3AdOfVbiyCr4--yU9E7R8uctMpqtMAYyABmMyfQ7zaLrrNcmKJcMtuTf-vCjHPh6qo8SJ1BI12CQowxUZzaCMHsi6gcaIIngFQl0yjOfPD92hkWFEIk4ga5RanzUVW34qmJaQ6laQIXxrzBthxVwfm7uZN4PYkrRAfKlf06ndtGp_Ew6opSuBdYdGxINh3N4U_0rdhm-5BWpwCscxeTJk2MyN1GFKzt0P5Zzh4oXut9JTDDyvC5FtzyiKnGMMkilebMdV7DRBLqTYSvHN37McjPX0-gYWfGkEQTYjCgBaqwGHUHjNbJQ9U2dUaEoPQIidM2uDIPgMsBvu7z0D1pW0SxCbTOH_p171cPn2Y3JK6p88iKa5H1LuIIQdFye4wih-rtSfMIYEw3heFpzHOcwIXPN4BtUx0tfMlcprki7LY3aDorGgwzIOzzLluVQy0e13JwDW2rARTvmgAG_omEefYgSwjRd42PahAI1kspcSnmOswbPsWxdPtviUOaMtyvi-vSJw/p.jpeg',
-    videoCover: '/assets/videos/ckeveryoneed.MP4',
+    videoCover:
+      'https://utfs.io/f/65099650-48c4-44b8-9182-85ede4d4819b-lcq7qq.mp4',
     images: [
       'https://ucad3841e3474cf35ce848140990.previews.dropboxusercontent.com/p/thumb/ACH2y7z7Zf-bMsRu58shzSCVt5TGMIMDhFc868InS8A8AfoSz8g_bxSifK_UOrZm1dvdBnKxVIFempvBG9B0MxcIr2qOuWCbPxmwBk36W3AdOfVbiyCr4--yU9E7R8uctMpqtMAYyABmMyfQ7zaLrrNcmKJcMtuTf-vCjHPh6qo8SJ1BI12CQowxUZzaCMHsi6gcaIIngFQl0yjOfPD92hkWFEIk4ga5RanzUVW34qmJaQ6laQIXxrzBthxVwfm7uZN4PYkrRAfKlf06ndtGp_Ew6opSuBdYdGxINh3N4U_0rdhm-5BWpwCscxeTJk2MyN1GFKzt0P5Zzh4oXut9JTDDyvC5FtzyiKnGMMkilebMdV7DRBLqTYSvHN37McjPX0-gYWfGkEQTYjCgBaqwGHUHjNbJQ9U2dUaEoPQIidM2uDIPgMsBvu7z0D1pW0SxCbTOH_p171cPn2Y3JK6p88iKa5H1LuIIQdFye4wih-rtSfMIYEw3heFpzHOcwIXPN4BtUx0tfMlcprki7LY3aDorGgwzIOzzLluVQy0e13JwDW2rARTvmgAG_omEefYgSwjRd42PahAI1kspcSnmOswbPsWxdPtviUOaMtyvi-vSJw/p.jpeg',
       'https://ucba28496e4a12e8fc736c2bba72.previews.dropboxusercontent.com/p/thumb/ACFPGbfWZW7NFY0nuE3xFEu3hqyDvEDJkwNNXyK80faSMGqV_CSJVGhP8nqwFpTXbuK5Vl3vgFCiu5VEXUwYvAEphgyHSgPVe_dDm2Gyh7EtuE06qvs3Fi8g4PiCLv6lbi6UxXBay__R2RrL6MMJn24VjFQoQW6wehgyLABLYQVJtiCoyx6h24nMHA-omkHyXrhOH44sewHYkh-tEch0NYPJ39ZiCDtHc6phbPBOsguG6L1Yh5Tbpe4CqRnizm-7HOopP3EEFP2vp6Oh1mIB4hxTsR9I5pej4T8Cf4WFGBZkW3l-xIyKLOTITZaefC9ns06OxJoPEaW6s-HSf0wSn-M5rw9QOkIwFWQpQvyNH8zgTSz7iSHFkesfnF1BP7kRYjXb21VxRUj-WpI4Oj6XxXRBA3tWOKhqwBgbN5pkkVMFsp5sHSLND2AST9d79urLWBgucRoWOH_5yjPSCECygNTh8V-kcxJdOFOJq59563v0h7Oeawg65EyEDQybQkLtO_ejp5sWBkt3uQJox_NcKx74cVYIu6eI8cA9d44m0Q4aCKpuE7l_Z3HvqIksRtapXHeAn6B-4GhHb4wGuFJ0k-GOBu-_d4WjsgtyjVS88GFLNkxCcd9jKjIK8uBrh2mnQ8cZjEFs2vGHjHiZputc02TaxzTlco_6nBHS5tKqr7spFnSHiqe_6qkjIIhfu5HVDhYM8Ng1Ju0jezlRa90LwYKNWYbqOU0PqpE1Y8GoDDm-DRYKC04mOhgGYSICGSOstyUcD9LUAMLolvXoo1YmXsdDPtSCE-j8hO7o5FEBurG9cqI_ssS-_wRDEhn0RmfyYVOGIuEChZnZwHa3PdSb_s1taXq1vYk_FO83c5VJeNwOBa_0KBguQxct2rJkufGsVVYoWykKvIa7UUsuU4KUuXvA-Bq1R8bHUkgWtQ_AbpfK3UQ8QzyyPjcA2_RbnwSCVT7rexM5GoOaxfhCtB53cWbmFZfM4WRTh8kk7C4zzS7pt_TRNOig8DT1NYMbZ7g9dNBH62aqv6FGurblgAxY4pPa/p.jpeg',
@@ -63,8 +64,9 @@ export const clientWorks = [
   },
   {
     slug: 'cd-underwear',
-    name: 'CK underwear',
-    videoCover: '/assets/videos/tony_ck_video_v2.MOV',
+    name: 'CK underxxwear',
+    videoCover:
+      'https://utfs.io/f/2b75bc94-4d71-49b7-bd8f-5aaeb3d38bc5-f3wx36.mp4',
     cover:
       'https://ucab6e97cc754ed9b0a15597c0e1.previews.dropboxusercontent.com/p/thumb/ACFgUeHlErdrb3kecCWJZmBHS5FsPfpkGKZnyIzRzRiN7SyzNkLUkC44KGZ-AnwsS4wGGQLknX0SeZkW1A7-nVfnmFOogRAqxHRZpDOwzN6AbGJchTwDER6k9PcYmaa5B-dHCE8OZQ0AMcYvdMUKygEPJNgm-oXM_1acA1UMdNvVO5BcqUPzku56HPBjFFCId9gKVmiQ035O3Ewd4dmHMO9bV4R5I6EaHIOOFKrYjUiOS1cnuws5Fp-GXFal-VVwWV4B0Rho42CGXkNUmH7c7hTyw_Qbtv-3vSCBIPc56KxVK7_2WItGBcSdZQq3y_iUT25og-PO1SFSGYnf6G3ZqjZGm4Ul_klQ-zB8NOr9p6u3jg/p.jpeg',
     images: [
@@ -73,7 +75,9 @@ export const clientWorks = [
       'https://ucaa6a1c005ac319203a2ffebf9b.previews.dropboxusercontent.com/p/thumb/ACEPhm_1JzJaNKvEDg6XPlZwcPlAjiGjvArp3X1y3TCJ9enKbHZhb9DTvJrqqRE169GWSxST10HxhITpMFUCQjMpJvr78ruIWT3VWfvL-WqsVfV8B6Ixv8Tnp62VHd7XMP6X6i7TdqkT0LpwdjwF3CypKXQSicmKr5E0MB41uYkhabCM2sB9O4YU7INYQ6Zfk8bE0FRVzby7NYPBXLpyCwbKSSrQkHd7pV4FtQIileehZ0O_3Wpk642E2zvn0hdwy9w0KzMYzs-LFSL9VW_Z8MPPg3WLIlFENbmTnC_5k5dyFYekNXermLPSfvKITwWJH_mTsYWDiwSNW2EerX4vu4EryTh8D7Zu3Ean9LN6SQYarBXXVhlBrHpmYHX4_9G8BOB80lEOlg-sCAUhr7SsjAHKN9v4tJ-E3fgybdrbjNom78RZFbwUwXbujmNDwPs8mxG5JM1wRt4h-8BhX0lnEKEvkNsmRcjRj_ZfSD9qU-zxjA/p.jpeg',
       'https://uc90ddf09225bc0b6edb86089c81.previews.dropboxusercontent.com/p/thumb/ACFMOssbUdF5EE3QMTfrQItVcWUUzBY0ybStVN1kpaWm46eHFLKi_duSzElU1TjpFl04HvzjF5bFnxa8Wn0PG54-NZolLAfgEjTw51mJUPZ5Mnsv63xbVDgLPMDw43sB1GUKtHjRiozol9q8I6-Wh6NHTa3QfAX3_XIRUn2uuKb8ty1yWek_aUj0NVwEqLpmCcQdAM1UmWEvha9twPhG-_7HVNZrxwFZK0SLZfX8coXC_h58W5h3aL3sBjSD0IjZFeIp3WRluO2LPbAlSvlfqVXqWpW9WjpvOWJ5OS1Aq1q3zcgYh0t--78zMs23JoYEWLttBizMFa1kb0ck6wwF9Zq5Zx1aryLK3v-JCuiox2Nr5_jCCoO4GGaLn9lS4i85pkJVPgoovN3muz_8WVjItGJwwdM-HMY2Qj-eFLzfcdf9gDWmJbf5wIN-Ta7f_c4CkyWquGD5M8r7LwUajX7_fArPiSk7M-G-ITXWrecu8tR7mg/p.jpeg',
     ],
-    videos: ['/assets/videos/tony_ck_video_v2.mp4'],
+    videos: [
+      'https://utfs.io/f/2b75bc94-4d71-49b7-bd8f-5aaeb3d38bc5-f3wx36.mp4',
+    ],
   },
 
   {
@@ -94,14 +98,17 @@ export const clientWorks = [
   {
     slug: 'gq-x-vogue-turkiye-travel-issue',
     name: 'GQ x Vogue Türkiye Travel issue',
-    videoCover: '/assets/videos/GQ_CASALAVANDA_1ST.mp4',
+    videoCover:
+      'https://utfs.io/f/8c6d6987-1114-4549-b9f8-b3a0b18ebe24-7eocxv.mp4',
     cover:
       'https://ucebbbb69d87f6debca89801df66.previews.dropboxusercontent.com/p/thumb/ACFTxvNvqgr_8Zu_zCEiqBgLNfDxRuWLZ-2KvvjnLZP7_u9OvpjvSAMt1_8FEUnOXcV3FwcU5wNxfgSTRrEXpOt5HlKehLkgeyAnkcdLOP314t9sejs9t_2LwOj4eZEDVpk909SbpFC21t-h7fVCie3Z5rtDzeun19-SsCf9I19KkfzQKXM2Qht-6Y9pv0hgK6TD0Gmhem3H5cuQUxNqqfQvjlCGsc7iU5cTcbJ36wI2WqGPtQSi5mFjncKq6Vol09xg3IXy4CZZ3SaIOUX5xtCyeH609MhOFjy7kW7jJacwh5NoeZovQvJj588hCOGVxnNzYTq6EUkS8sSOdp4xgO300fRZZlEqpyoq3O-thLKhAQ/p.jpeg',
     images: [
       'https://uc3acaa5e55a5399d1daaab33da4.previews.dropboxusercontent.com/p/thumb/ACEF0KN776nWDNdsm8g4B-pVvPT2X5OH_vgz2LbzUTrYWgW9xN_e6zH3IbkFB8FCYnHFwTCOf-6K_gAdCpTigba-bfM1F0eczYMP6PPKeG3LB102gJUhmLFeLqV8d2C7LYA9h9qH-mZoBzYlnJDrF2GqKyQZFu0rQ8oU1s8exm3ASiwKEjCHcJjQILbFsekKqYxW1GFICzjEp38rHdXcDupSFNBUYwBX_hiNIVPeKVKJPeypeaDBVXYmH-vsl-4sOyXHK8f_YZfmOgXyo-2JjReeHiMDhhWmWhPkeEOCILKksN5bC8J1H_UpGdZ8DE7OUQH6uR5m7jT_BgcihmeIsKqIKmbuy8IU6bA_4kp4G0Ff8Q/p.jpeg',
       'https://uc2778a440ddca62048d795183c0.previews.dropboxusercontent.com/p/thumb/ACH7KBxGjAbBV5R_cwj0fyqWW-MaM2yv__whX1z5uPKNxEESLs2WqZOpxcLfujw9mZnu7Smvne7_TSCp4cbs5z4AvyVSoOWUA3kHqNefRODSUMhtEbh4nTcgflIKPQKCPR6CoCVFAZFjcREpe0n1Sxkf4pTS2gINYeJZedJULIAbAMmrgZzsWEmMKBz0Ros076wgyO1DbG7W7hSka7cMaK0V8pbnUIvTIxNO1pEy51Mm2gPChZ_w0xSbtDskuyASEHtcqDbXPGmqICJd3LSQ5pXzWAzfExlG_GI6i0eIK7Cx28kcL2e6y4-ZhJrzyErzPg4qrjx_iN51z1ro4spl3-9IjGBQKEUu3xk-Ls4KORusUw/p.jpeg',
     ],
-    videos: ['/assets/videos/GQ_CASALAVANDA_1ST.mp4'],
+    videos: [
+      'https://utfs.io/f/8c6d6987-1114-4549-b9f8-b3a0b18ebe24-7eocxv.mp4',
+    ],
   },
 
   {
