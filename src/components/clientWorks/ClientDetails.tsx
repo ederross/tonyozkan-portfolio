@@ -59,7 +59,7 @@ export default function ClientDetails({
               </motion.video>
               <div
                 onClick={() => setIsMuted(!isMuted)}
-                className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border bg-slate-50"
+                className="hidden h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border bg-slate-50 lg:flex"
               >
                 {isMuted ? (
                   <VolumeX size={20} className="text-slate-500" />
