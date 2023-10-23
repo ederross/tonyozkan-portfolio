@@ -1,7 +1,7 @@
 'use client'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-import { Music2, Volume2, VolumeX, X } from 'lucide-react'
+import { Loader2, Music2, Volume2, VolumeX, X } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -25,6 +25,12 @@ export default function ClientDetails({
 }: Props) {
   const [isMuted, setIsMuted] = useState(true)
 
+  const [isVideoPlayerMounted, setIsVideoPlayerMounted] = useState(false)
+
+  useEffect(() => {
+    setIsVideoPlayerMounted(true)
+  }, [])
+
   return (
     <>
       <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto bg-white px-4 pb-40 ">
@@ -45,18 +51,24 @@ export default function ClientDetails({
           </div>
           {selectedClient.videoCover && (
             <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden">
-              <motion.video
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 2 }}
-                style={{ width: '100%', height: 600 }}
-                autoPlay
-                loop
-                muted={isMuted}
-                controls={false}
-              >
-                <source src={selectedClient.videoCover} type="video/mp4" />
-              </motion.video>
+              {!isVideoPlayerMounted ? (
+                <div className="flex h-[600px] w-full items-center justify-center">
+                  <Loader2 className="animate-spin" />
+                </div>
+              ) : (
+                <motion.video
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 2 }}
+                  style={{ width: '100%', height: 600 }}
+                  autoPlay
+                  loop
+                  muted={isMuted}
+                  controls={false}
+                >
+                  <source src={selectedClient.videoCover} type="video/mp4" />
+                </motion.video>
+              )}
               <div
                 onClick={() => setIsMuted(!isMuted)}
                 className="hidden h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border bg-slate-50 lg:flex"
