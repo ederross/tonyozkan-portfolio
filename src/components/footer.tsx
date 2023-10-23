@@ -23,7 +23,7 @@ export default function Footer() {
           </Link>
 
           <div className="mb-8 flex w-full flex-col items-start gap-2 px-4">
-            <span className="text-sm font-semibold">NAVIGATON</span>
+            <span className="text-sm font-semibold">NAVIGATION</span>
             <Link href={'/client-works'} className="w-full">
               <Button className="h-20 w-full border border-black text-lg font-medium text-black">
                 Client Works
