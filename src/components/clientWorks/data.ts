@@ -64,7 +64,7 @@ export const clientWorks = [
   },
   {
     slug: 'cd-underwear',
-    name: 'CK underxxwear',
+    name: 'CK underwear',
     videoCover:
       'https://utfs.io/f/2b75bc94-4d71-49b7-bd8f-5aaeb3d38bc5-f3wx36.mp4',
     cover:
