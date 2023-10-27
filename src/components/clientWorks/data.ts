@@ -1,5 +1,14 @@
 export const clientWorks = [
   {
+    slug: 'journa-1992',
+    name: 'Journal 1992',
+    cover:
+      'https://uc5a1b9bcddbfdcf24f27aa76912.previews.dropboxusercontent.com/p/thumb/ACE750ACnimcOB3QIdmY-JJf4LlGKU2_3jsE2eP5M7ksh-QsH33HI-2E5LL__TbDIbAn1doXz0P8hA8UrAejh4BxxDyK-keGBDq2dpw_RP4pjUoij7KLfjHyHoxKvcsQqPPPv_2KjJ34MNcUhuobi4DbCnpumE-zldWom1-aWSWyTAR_-YPC6xQ6s9Rh28Fgee3FV-IB91NjcUSA1Yzl3pmPE0FNFb5qEMNRuKCcu1fSbM_mHVNjEqYS4JzrnUsesYq7Zd4TV5WjGe9EeuPpHswnpBpZPVwm2fmeXSG3yzhtNg/p.jpeg?size=512x512&size_mode=2',
+    videoCover: '/assets/videos/journa1992final_compressed.mp4',
+    images: [],
+    videos: ['/assets/videos/journa1992final_compressed.mp4'],
+  },
+  {
     slug: 'ck-everyone-ed',
     name: 'CK everyone ed',
     cover:
