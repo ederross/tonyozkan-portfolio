@@ -47,15 +47,16 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, delay: 1 }}
-            className="h-[600px] w-full"
+            className="h-[500px] w-full bg-red-200"
           >
             {selectedFilm.videosId.map((data, key) => (
               <YouTube
                 key={key}
                 videoId={data}
+                className="h-[400px]"
                 opts={{
-                  height: '590',
                   width: '100%',
+                  height: 500,
                   playerVars: {
                     // https://developers.google.com/youtube/player_parameters
                     autoplay: 0,
@@ -68,12 +69,12 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
               />
             ))}
           </motion.div>
-          <div className="mt-8 flex">
-            <div className="flex w-1/3 flex-col">
-              <h2 className="my-4 text-3xl sm:text-4xl">Screenshots</h2>
+          <div className="mt-4 flex flex-col sm:mt-8 sm:flex-row ">
+            <div className="w-3/3 mb-2 flex flex-col sm:w-1/3">
+              <h2 className="my-1 text-3xl sm:text-4xl">Screenshots</h2>
               <p>Lorem ipsum dolor sit amet</p>
             </div>
-            <div className="w-2/3">
+            <div className="w-3/3 sm:w-2/3">
               <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
                 {selectedFilm?.images.map((data, key) => (
                   <motion.div
@@ -81,7 +82,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 10 }}
                     transition={{ ease: 'easeInOut', duration: 2 }}
-                    className="relative h-[100px] bg-black"
+                    className="relative h-[200px] bg-black sm:h-[100px]"
                   >
                     <Image
                       priority
