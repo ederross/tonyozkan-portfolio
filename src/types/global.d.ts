@@ -10,6 +10,13 @@ declare global {
     images: string[]
     videos?: string[]
   }
+  interface IFilm {
+    slug: string
+    name: string
+    cover: string
+    videosId: string[]
+    images: string[]
+  }
   //* Types
 
   type StateType = {

@@ -1,4 +1,4 @@
-import VideosDynamic from '@/components/directing/video-dynamic'
+import VideosDynamic from '@/components/film/video-dynamic'
 
 export default function Film() {
   return (
