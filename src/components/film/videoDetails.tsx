@@ -1,5 +1,5 @@
 'use Film'
-import { X } from 'lucide-react'
+import { Loader2, X } from 'lucide-react'
 import Link from 'next/link'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
@@ -25,9 +25,14 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
       <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto bg-white px-4 pb-40 ">
         <div className="m-auto w-full max-w-[1000px] ">
           <div className="mb-8 mt-8 flex min-h-[32px] w-full justify-between py-4">
-            <div className="w-2/2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 2, delay: 1 }}
+              className="w-2/2"
+            >
               <h2 className="text-3xl sm:text-4xl">{selectedFilm?.name}</h2>
-            </div>
+            </motion.div>
             <Link href={'/film'}>
               <button
                 type="button"
@@ -38,15 +43,15 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
               </button>
             </Link>
           </div>
-
-          {selectedFilm.videosId.map((data, key) => (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2, delay: 1 }}
-              key={key}
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, delay: 1 }}
+            className="h-[600px] w-full"
+          >
+            {selectedFilm.videosId.map((data, key) => (
               <YouTube
+                key={key}
                 videoId={data}
                 opts={{
                   height: '590',
@@ -61,8 +66,8 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                   event.target.pauseVideo()
                 }}
               />
-            </motion.div>
-          ))}
+            ))}
+          </motion.div>
           <div className="mt-8 flex">
             <div className="flex w-1/3 flex-col">
               <h2 className="my-4 text-3xl sm:text-4xl">Screenshots</h2>
