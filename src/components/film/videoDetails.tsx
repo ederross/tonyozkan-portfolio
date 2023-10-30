@@ -5,6 +5,7 @@ import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
 import YouTube from 'react-youtube'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 interface Props {
   selectedFilm: IFilm
@@ -40,7 +41,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
 
           {selectedFilm.videosId.map((data, key) => (
             <motion.div
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 2, delay: 1 }}
               key={key}
@@ -62,6 +63,33 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
               />
             </motion.div>
           ))}
+          <div className="mt-8 flex">
+            <div className="flex w-1/3 flex-col">
+              <h2 className="my-4 text-3xl sm:text-4xl">Screenshots</h2>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div className="w-2/3">
+              <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
+                {selectedFilm?.images.map((data, key) => (
+                  <motion.div
+                    key={key + Math.random()}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 10 }}
+                    transition={{ ease: 'easeInOut', duration: 2 }}
+                    className="relative h-[100px] bg-black"
+                  >
+                    <Image
+                      priority
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      alt="NextUI hero Image"
+                      src={data}
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>
