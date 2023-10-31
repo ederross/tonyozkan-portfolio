@@ -49,7 +49,7 @@ export default function VideosDynamic() {
           <div key={key} className="mb-16 flex flex-col gap-2">
             <Link href={`?film=${data.slug}`}>
               <div
-                className="h-[400px] w-full bg-slate-200"
+                className="h-[600px] w-full bg-slate-200"
                 style={{
                   backgroundImage: `url('${data.cover}')`,
                   backgroundSize: 'cover',

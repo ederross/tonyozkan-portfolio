@@ -1,11 +1,11 @@
 'use Film'
-import { Loader2, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import Link from 'next/link'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-import YouTube from 'react-youtube'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import YouTube from 'react-youtube'
 
 interface Props {
   selectedFilm: IFilm
@@ -72,7 +72,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
           <div className="mt-4 flex flex-col sm:mt-8 sm:flex-row ">
             <div className="w-3/3 mb-2 flex flex-col sm:w-1/3">
               <h2 className="my-1 text-3xl sm:text-4xl">Screenshots</h2>
-              <p>Lorem ipsum dolor sit amet</p>
+              <p>See the captures of this great work.</p>
             </div>
             <div className="w-3/3 sm:w-2/3">
               <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
@@ -101,19 +101,3 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
     </>
   )
 }
-
-// {/* <YouTube
-//           videoId="G93mlf97jVE"
-//           opts={{
-//             height: '390',
-//             width: '100%',
-//             playerVars: {
-//               // https://developers.google.com/youtube/player_parameters
-//               autoplay: 1,
-//             },
-//           }}
-//           onReady={(event) => {
-//             // access to player in all event handlers via event.target
-//             event.target.pauseVideo()
-//           }}
-//         /> */}
