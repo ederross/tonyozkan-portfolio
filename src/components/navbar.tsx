@@ -19,8 +19,8 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed z-10 w-full">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between pt-4 max-xl:px-4">
+      <nav className="fixed z-10 w-full bg-transparent">
+        <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between bg-transparent pt-4 max-xl:px-4">
           {!isNoLogoPage ? (
             <Link href={'/'}>
               <div className="relative ml-2 h-8 w-[116px]">
