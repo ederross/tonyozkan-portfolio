@@ -91,7 +91,7 @@ export default function ClientDetails({
                 key={key + Math.random()}
                 className="relative  h-[500px] sm:h-[300px]"
               >
-                <Avatar className="h-full w-full rounded-none bg-black">
+                <Avatar className="h-full w-full rounded-lg bg-slate-100">
                   <AvatarImage
                     className="object-contain"
                     src={data}
@@ -102,7 +102,7 @@ export default function ClientDetails({
                     className="rounded-md"
                     suppressHydrationWarning
                   >
-                    <Loader2 className="animate-spin text-slate-500" />
+                    <Loader2 className="animate-spin text-black" />
                   </AvatarFallback>
                 </Avatar>
               </motion.div>
