@@ -59,7 +59,7 @@ export default function ClientDetails({
                 <motion.video
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 2 }}
+                  transition={{ duration: 0.6 }}
                   style={{ width: '100%', height: 600 }}
                   autoPlay
                   loop
@@ -86,7 +86,7 @@ export default function ClientDetails({
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 10 }}
-                transition={{ ease: 'easeInOut', duration: 2 }}
+                transition={{ ease: 'easeInOut', duration: 0.6 }}
                 key={key + Math.random()}
                 className="relative h-[600px]"
               >

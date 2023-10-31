@@ -46,7 +46,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.6 }}
             className="h-[500px] w-full bg-slate-50"
           >
             {selectedFilm.videosId.map((data, key) => (
@@ -81,7 +81,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                     key={key + Math.random()}
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 10 }}
-                    transition={{ ease: 'easeInOut', duration: 2 }}
+                    transition={{ ease: 'easeInOut', duration: 0.6 }}
                     className="relative h-[200px] bg-black sm:h-[100px]"
                   >
                     <Image
