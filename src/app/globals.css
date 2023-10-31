@@ -7,6 +7,6 @@
 
 @layer base {
   * {
-    @apply max-sm:cursor-none;
+    @apply max-sm:cursor-none bg-[#F6F6F6];
   }
 }
