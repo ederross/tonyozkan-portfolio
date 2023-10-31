@@ -4,6 +4,7 @@ import { nextui } from '@nextui-org/react'
 module.exports = {
   darkMode: ['class'],
   content: [
+    './node_modules/flowbite-react/**/*.js',
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
@@ -84,5 +85,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), nextui()],
+  plugins: [
+    require('tailwindcss-animate'),
+    nextui(),
+    require('flowbite/plugin'),
+  ],
 }

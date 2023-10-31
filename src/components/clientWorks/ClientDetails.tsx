@@ -1,10 +1,11 @@
 'use client'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-import { Loader2, Music2, Volume2, VolumeX, X } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
+import { Loader2, Volume2, VolumeX, X } from 'lucide-react'
+
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 interface Client {
   name: string
@@ -88,14 +89,28 @@ export default function ClientDetails({
                 animate={{ opacity: 1, y: 10 }}
                 transition={{ ease: 'easeInOut', duration: 0.6 }}
                 key={key + Math.random()}
-                className="relative h-[600px]"
+                className="relative  h-[500px] sm:h-[300px]"
               >
-                <Image
+                {/* <Image
                   fill
                   style={{ objectFit: 'contain' }}
                   alt="NextUI hero Image"
                   src={data}
-                />
+                /> */}
+                <Avatar className="h-full w-full rounded-none bg-black">
+                  <AvatarImage
+                    className="object-contain"
+                    src={data}
+                    alt={`store profile picture`}
+                    suppressHydrationWarning
+                  />
+                  <AvatarFallback
+                    className="rounded-md"
+                    suppressHydrationWarning
+                  >
+                    <Loader2 className="animate-spin text-slate-500" />
+                  </AvatarFallback>
+                </Avatar>
               </motion.div>
             ))}
           </div>

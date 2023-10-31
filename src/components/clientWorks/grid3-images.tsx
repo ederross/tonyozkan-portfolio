@@ -5,10 +5,12 @@ import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 import { clientWorks } from './data'
 
-import ClientDetails from './ClientDetails'
-import { useSearchParams } from 'next/navigation'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useAnimate, usePresence, motion } from 'framer-motion'
+import { useSearchParams } from 'next/navigation'
+import ClientDetails from './ClientDetails'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import { Loader2 } from 'lucide-react'
 
 export default function Grid3Images() {
   const searchParams = useSearchParams()
@@ -50,65 +52,53 @@ export default function Grid3Images() {
   return (
     <>
       <div className="px-4">
-        <div className="col-span-2 my-24 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
+        <div className="my-8 grid grid-cols-2 gap-4 md:grid-cols-4">
           {clientWorks.map((data, key) => (
-            <Link key={key} href={`?client=${data.slug}`}>
-              <div className="relative min-h-[400px] cursor-pointer overflow-hidden bg-slate-50">
-                {data.videoCover ? (
-                  <>
-                    <div
-                      className="max-h-[400px] overflow-hidden duration-1000 ease-out hover:scale-150 "
-                      onMouseEnter={() => handleMouseEnter(data.slug)}
-                      onMouseLeave={() => handleMouseLeave(data.slug)}
+            <Link
+              key={key}
+              href={`?client=${data.slug}`}
+              className="flex cursor-pointer items-center justify-center gap-4 overflow-hidden bg-slate-100"
+            >
+              {data.videoCover ? (
+                <>
+                  <div
+                    className="flex h-full items-center justify-center overflow-hidden bg-black duration-1000 ease-out hover:scale-[2] "
+                    onMouseEnter={() => handleMouseEnter(data.slug)}
+                    onMouseLeave={() => handleMouseLeave(data.slug)}
+                  >
+                    <motion.video
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1, scale: 2 }}
+                      style={{ width: '100%' }}
+                      autoPlay
+                      loop
+                      muted
+                      controls={false}
                     >
-                      {/* <>
-                        <motion.div
-                          transition={{
-                            ease: 'easeInOut',
-                            delay: 3,
-                          }}
-                        >
-                          <Image
-                            loading="eager"
-                            fill
-                            style={{ objectFit: 'contain' }}
-                            className="duration-1000 ease-out hover:scale-125"
-                            alt="NextUI hero Image"
-                            src={data.cover}
-                          />
-                        </motion.div>
-                      </> */}
-
-                      {/* {hoveredSlug === data.slug && ( */}
-                      <motion.video
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1, scale: 3 }}
-                        style={{ width: '100%', height: '400px' }}
-                        autoPlay
-                        loop
-                        muted
-                        controls={false}
-                      >
-                        <source src={data.videoCover} type="video/mp4" />
-                      </motion.video>
-                      {/* )} */}
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div>
-                      <Image
-                        loading="eager"
-                        fill
-                        style={{ objectFit: 'contain' }}
-                        className="duration-1000 ease-out hover:scale-125"
-                        alt="NextUI hero Image"
+                      <source src={data.videoCover} type="video/mp4" />
+                    </motion.video>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="flex h-[400px] w-full items-center justify-center">
+                    <Avatar className=" h-full w-full rounded-none">
+                      <AvatarImage
+                        className="object-cover"
                         src={data.cover}
+                        alt={`store profile picture`}
+                        suppressHydrationWarning
                       />
-                    </div>
-                  </>
-                )}
-              </div>
+                      <AvatarFallback
+                        className="rounded-md"
+                        suppressHydrationWarning
+                      >
+                        <Loader2 className="animate-spin text-slate-500" />
+                      </AvatarFallback>
+                    </Avatar>
+                  </div>
+                </>
+              )}
             </Link>
           ))}
         </div>
