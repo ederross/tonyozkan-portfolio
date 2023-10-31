@@ -44,7 +44,7 @@ export default function VideosDynamic() {
   }, [handleFilm])
   return (
     <>
-      <section className="mt-16 flex flex-col">
+      <section className="mt-16 flex flex-col px-4">
         {filmData.map((data, key) => (
           <div key={key} className="mb-16 flex flex-col gap-2">
             <Link href={`?film=${data.slug}`}>
@@ -53,6 +53,7 @@ export default function VideosDynamic() {
                 style={{
                   backgroundImage: `url('${data.cover}')`,
                   backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                 }}
               ></div>
             </Link>
