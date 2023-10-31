@@ -16,6 +16,21 @@ export default function Grid3Images() {
   const searchParams = useSearchParams()
   const clientName = searchParams.get('client')
 
+  // video control
+  const [isVideoLoading, setVideoIsLoading] = useState(true)
+
+  const handleLoadedData = () => {
+    setVideoIsLoading(false)
+  }
+
+  const handleCanPlay = () => {
+    setVideoIsLoading(false)
+  }
+
+  const handleWaiting = () => {
+    setVideoIsLoading(true)
+  }
+
   const [isCoverHovered, setIsCoverHovered] = useState(false)
 
   const [selectedClientURL, setSelectedClientURL] = useState<IClientWork>()
@@ -62,20 +77,27 @@ export default function Grid3Images() {
               {data.videoCover ? (
                 <>
                   <div
-                    className="flex h-full items-center justify-center overflow-hidden bg-black duration-1000 ease-out hover:scale-[2]"
+                    className="flex h-full w-full items-center justify-center overflow-hidden duration-1000 ease-out hover:scale-[2]"
                     onMouseEnter={() => handleMouseEnter(data.slug)}
                     onMouseLeave={() => handleMouseLeave(data.slug)}
                   >
+                    {isVideoLoading && (
+                      <Loader2 className="animate-spin text-slate-500" />
+                    )}
                     <motion.video
                       initial={{ opacity: 0 }}
-                      animate={{ opacity: 1, scale: 2 }}
+                      animate={{ opacity: 1, scale: 3 }}
                       style={{ width: '100%' }}
                       autoPlay
                       loop
                       muted
+                      onLoadedData={handleLoadedData}
+                      onCanPlay={handleCanPlay}
+                      onWaiting={handleWaiting}
                       controls={false}
                     >
                       <source src={data.videoCover} type="video/mp4" />
+                      Your browser does not support the video tag.
                     </motion.video>
                   </div>
                 </>
