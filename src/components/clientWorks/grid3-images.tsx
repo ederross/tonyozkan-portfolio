@@ -62,7 +62,7 @@ export default function Grid3Images() {
               {data.videoCover ? (
                 <>
                   <div
-                    className="flex h-full items-center justify-center overflow-hidden bg-black duration-1000 ease-out hover:scale-[2] "
+                    className="flex h-full items-center justify-center overflow-hidden bg-black duration-1000 ease-out hover:scale-[2]"
                     onMouseEnter={() => handleMouseEnter(data.slug)}
                     onMouseLeave={() => handleMouseLeave(data.slug)}
                   >
@@ -81,8 +81,13 @@ export default function Grid3Images() {
                 </>
               ) : (
                 <>
-                  <div className="flex h-[400px] w-full items-center justify-center">
-                    <Avatar className=" h-full w-full rounded-none">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="flex h-[400px] w-full items-center justify-center "
+                  >
+                    <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[2]">
                       <AvatarImage
                         className="object-cover"
                         src={data.cover}
@@ -96,7 +101,7 @@ export default function Grid3Images() {
                         <Loader2 className="animate-spin text-slate-500" />
                       </AvatarFallback>
                     </Avatar>
-                  </div>
+                  </motion.div>
                 </>
               )}
             </Link>

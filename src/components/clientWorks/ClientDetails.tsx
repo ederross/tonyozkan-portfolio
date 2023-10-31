@@ -91,12 +91,6 @@ export default function ClientDetails({
                 key={key + Math.random()}
                 className="relative  h-[500px] sm:h-[300px]"
               >
-                {/* <Image
-                  fill
-                  style={{ objectFit: 'contain' }}
-                  alt="NextUI hero Image"
-                  src={data}
-                /> */}
                 <Avatar className="h-full w-full rounded-none bg-black">
                   <AvatarImage
                     className="object-contain"
