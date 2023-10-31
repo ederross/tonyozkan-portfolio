@@ -8,7 +8,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <>
-      <footer>
+      <footer className="border border-t">
         <div className="flex flex-col items-center py-14 sm:hidden">
           <Link href={'/'} className="mb-12">
             <div className="relative ml-2 h-24 w-[216px]">

@@ -34,9 +34,9 @@ export default function ClientDetails({
 
   return (
     <>
-      <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto bg-white px-4 pb-40 ">
-        <div className="m-auto w-full max-w-[1000px] ">
-          <div className="mt-8 flex min-h-[32px] w-full justify-between py-4">
+      <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto bg-[#F6F6F6] px-4 pb-40 ">
+        <div className="m-auto w-full max-w-[1000px]">
+          <div className="mt-8 flex min-h-[32px] w-full justify-between  py-4">
             <div className="w-1/2">
               <h2 className="text-3xl sm:text-4xl">{selectedClient?.name}</h2>
             </div>
@@ -91,9 +91,9 @@ export default function ClientDetails({
                 key={key + Math.random()}
                 className="relative  h-[500px] sm:h-[300px]"
               >
-                <Avatar className="h-full w-full rounded-lg bg-slate-100">
+                <Avatar className="h-full w-full rounded-lg">
                   <AvatarImage
-                    className="object-contain"
+                    className="bg-gray-200 object-contain"
                     src={data}
                     alt={`store profile picture`}
                     suppressHydrationWarning
