@@ -23,11 +23,12 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-[1400px] flex-wrap items-center justify-between bg-transparent pt-4 max-xl:px-4">
           {!isNoLogoPage ? (
             <Link href={'/'}>
-              <div className="relative ml-2 h-8 w-[116px]">
+              <div className="relative ml-2 h-8 w-[116px] bg-transparent">
                 <Image
                   loading="eager"
                   fill
                   style={{ objectFit: 'contain' }}
+                  className="bg-transparent"
                   alt="NextUI hero Image"
                   src="/assets/logo.svg"
                 />

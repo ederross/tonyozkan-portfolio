@@ -22,7 +22,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
 
   return (
     <>
-      <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto px-4 pb-40 ">
+      <section className="fixed left-0 z-50 mx-auto  h-screen w-full overflow-auto bg-[#F6F6F6] px-4 pb-40 ">
         <div className="m-auto w-full max-w-[1000px] ">
           <div className="mb-8 mt-8 flex min-h-[32px] w-full justify-between py-4">
             <motion.div
