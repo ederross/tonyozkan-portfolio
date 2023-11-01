@@ -67,32 +67,30 @@ export default function ClientDetails({
           </div>
           {selectedClient.videos?.length === 1 && (
             <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden">
-              <>
-                {isVideoLoading && (
-                  <>
-                    <div className="flex flex-col items-center gap-2">
-                      <Loader2 className="animate-spin text-black" />
-                      <span>loading video...</span>
-                    </div>
-                  </>
-                )}
-                <motion.video
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="h-[200px] bg-[#fefff7] sm:h-[500px]"
-                  style={{ width: '100%' }}
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  onLoadedData={handleLoadedData}
-                  onCanPlay={handleCanPlay}
-                  onWaiting={handleWaiting}
-                  controls={false}
-                >
-                  <source src={selectedClient.videos[0]} type="video/mp4" />
-                </motion.video>
-              </>
+              {isVideoLoading && (
+                <>
+                  <div className="flex flex-col items-center gap-2">
+                    <Loader2 className="animate-spin text-black" />
+                    <span>loading video...</span>
+                  </div>
+                </>
+              )}
+              <motion.video
+                initial={{ opacity: 0, y: 100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="h-[200px] bg-transparent sm:h-[500px]"
+                style={{ width: '100%' }}
+                autoPlay
+                loop
+                muted={isMuted}
+                onLoadedData={handleLoadedData}
+                onCanPlay={handleCanPlay}
+                onWaiting={handleWaiting}
+                controls={false}
+              >
+                <source src={selectedClient.videos[0]} type="video/mp4" />
+              </motion.video>
 
               <div
                 onClick={() => setIsMuted(!isMuted)}
