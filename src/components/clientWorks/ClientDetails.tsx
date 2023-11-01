@@ -28,6 +28,21 @@ export default function ClientDetails({
 
   const [isVideoPlayerMounted, setIsVideoPlayerMounted] = useState(false)
 
+  // video control
+  const [isVideoLoading, setVideoIsLoading] = useState(true)
+
+  const handleLoadedData = () => {
+    setVideoIsLoading(false)
+  }
+
+  const handleCanPlay = () => {
+    setVideoIsLoading(false)
+  }
+
+  const handleWaiting = () => {
+    setVideoIsLoading(true)
+  }
+
   useEffect(() => {
     setIsVideoPlayerMounted(true)
   }, [])
@@ -50,25 +65,33 @@ export default function ClientDetails({
               </button>
             </Link>
           </div>
-          {selectedClient.videoCover && (
+          {selectedClient.videos?.length === 1 && (
             <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden">
               {!isVideoPlayerMounted ? (
                 <div className="flex h-[600px] w-full items-center justify-center">
                   <Loader2 className="animate-spin" />
                 </div>
               ) : (
-                <motion.video
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  style={{ width: '100%', height: 600 }}
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  controls={false}
-                >
-                  <source src={selectedClient.videoCover} type="video/mp4" />
-                </motion.video>
+                <>
+                  {isVideoLoading && (
+                    <Loader2 className="animate-spin text-slate-500" />
+                  )}
+                  <motion.video
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    style={{ width: '100%', height: 600 }}
+                    autoPlay
+                    loop
+                    muted={isMuted}
+                    onLoadedData={handleLoadedData}
+                    onCanPlay={handleCanPlay}
+                    onWaiting={handleWaiting}
+                    controls={false}
+                  >
+                    <source src={selectedClient.videos[0]} type="video/mp4" />
+                  </motion.video>
+                </>
               )}
               <div
                 onClick={() => setIsMuted(!isMuted)}
@@ -82,7 +105,7 @@ export default function ClientDetails({
               </div>
             </div>
           )}
-          <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
+          <div className="col-span-2 mt-8 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
             {selectedClient?.images.map((data, key) => (
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
@@ -93,7 +116,7 @@ export default function ClientDetails({
               >
                 <Avatar className="h-full w-full rounded-lg">
                   <AvatarImage
-                    className="bg-gray-200 object-contain"
+                    className="bg-[#fefff7] object-contain"
                     src={data}
                     alt={`store profile picture`}
                     suppressHydrationWarning
