@@ -28,7 +28,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 2, delay: 1 }}
+              transition={{ duration: 0.4 }}
               className="w-2/2"
             >
               <h2 className="text-3xl sm:text-4xl">{selectedFilm?.name}</h2>
@@ -43,12 +43,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
               </button>
             </Link>
           </div>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="h-[500px] w-full bg-slate-50"
-          >
+          <div className="h-[500px] w-full bg-slate-50">
             {selectedFilm.videosId.map((data, key) => (
               <YouTube
                 key={key}
@@ -68,7 +63,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                 }}
               />
             ))}
-          </motion.div>
+          </div>
           <div className="mt-4 flex flex-col sm:mt-8 sm:flex-row ">
             <div className="w-3/3 mb-2 flex flex-col sm:w-1/3">
               <h2 className="my-1 text-3xl sm:text-4xl">Screenshots</h2>
