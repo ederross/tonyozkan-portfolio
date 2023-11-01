@@ -11,6 +11,7 @@ declare global {
     videos?: string[]
   }
   interface IFilm {
+    isComingSoon?: false
     slug: string
     name: string
     cover: string

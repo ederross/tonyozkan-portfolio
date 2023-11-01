@@ -88,4 +88,27 @@ export const filmData = [
       'https://uc52613e42f9c7b784f3e41c7a2c.previews.dropboxusercontent.com/p/thumb/ACELtm_lAYLa78lYRwNkbMn7zrctK4jBBcNGPW_WX2rEkkThupfcnu42qg7xYwNyIW1qq7SZK-0cF0iwE0oW095arALy4QmGZfCpmmMbBlk-nFcE-Hq6VJD6LYreCuP-_-9lVqQuEZ6MgkHeZuIUSiIqvkNwDYlXRmTVXtAhHLkeoT4KXg8ExwL4vnmFnFBdDwBaMcyfOA8pw9KuMNhmy650qxE9ZzRt-xspGSGkXt5hGgIaNV1Tsch1UfJj-GE9kgAwyMxu0wcEA3Ez0UZX4fzJwXBa186m2PSPgA2P_GxGiGNs0zW-bjyF8DgCXuTIoB2ptRiVMr8AO5v-EV6_yLauzEv8t7FgZa6S-KsDcKYhIM5glzJRHEj_ww8lnJiP8hL7PpYi55kK7I77lu-NwHqB/p.jpeg',
     ],
   },
+  {
+    isComingSoon: true,
+    slug: 'only-way-short',
+    name: 'Only way short (coming soon)',
+    cover: 'https://utfs.io/f/5e518899-f688-46dc-9f12-7c0cb6b1091d-wr9d08.jpg',
+    videosId: ['_JfOkKLZ1oI'],
+    images: [
+      'https://utfs.io/f/5e518899-f688-46dc-9f12-7c0cb6b1091d-wr9d08.jpg',
+      'https://utfs.io/f/783ba7e3-6a70-414f-9896-531eaac93b2e-6x11wo.jpg',
+      'https://utfs.io/f/59529ece-2915-47ab-bfb8-ec1fec056583-6x11xj.jpg',
+      'https://utfs.io/f/bf34e14a-d90b-472a-9afc-863c0bbbf6bf-y0lm48.jpg',
+      'https://utfs.io/f/f92fcbbe-463b-4cd5-8c11-e4d97041e111-y0lm44.jpg',
+      'https://utfs.io/f/da13d814-9745-450e-b4a2-f24850ec5e7a-70btgu.jpg',
+      'https://utfs.io/f/2ed9e448-bddc-437b-8f34-cb271f142cef-70bthp.jpg',
+      'https://utfs.io/f/7cba19ff-d376-448d-829d-7025f97cc6fc-70btik.jpg',
+      'https://utfs.io/f/72bca46d-b983-4f07-82dc-83e2208a06f7-70btjf.jpg',
+      'https://utfs.io/f/82eeacde-ec9c-4db9-945e-322cb9ba69fe-70btka.jpg',
+      'https://utfs.io/f/52025e8c-c0ca-411f-8e98-37715915902d-70btl5.jpg',
+      'https://utfs.io/f/03d7aaa4-2799-4772-a6e8-c131e4835cac-70btm0.jpg',
+      //
+      'https://utfs.io/f/a826c9fd-bf8e-4091-ab8e-45a7463e7a1f-y0lm42.jpg',
+    ],
+  },
 ]

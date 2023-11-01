@@ -1,5 +1,5 @@
 'use Film'
-import { X } from 'lucide-react'
+import { VideoIcon, X } from 'lucide-react'
 import Link from 'next/link'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
@@ -44,25 +44,32 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
             </Link>
           </div>
           <div className="h-[500px] w-full bg-slate-50">
-            {selectedFilm.videosId.map((data, key) => (
-              <YouTube
-                key={key}
-                videoId={data}
-                className="h-[400px]"
-                opts={{
-                  width: '100%',
-                  height: 500,
-                  playerVars: {
-                    // https://developers.google.com/youtube/player_parameters
-                    autoplay: 0,
-                  },
-                }}
-                onReady={(event) => {
-                  // access to player in all event handlers via event.target
-                  event.target.pauseVideo()
-                }}
-              />
-            ))}
+            {selectedFilm.isComingSoon && (
+              <div className="flex h-[500px] w-full flex-col items-center justify-center rounded-[8px] border bg-[#F6F6F6]">
+                <VideoIcon />
+                <span>Coming Soon...</span>
+              </div>
+            )}
+            {!selectedFilm.isComingSoon &&
+              selectedFilm.videosId.map((data, key) => (
+                <YouTube
+                  key={key}
+                  videoId={data}
+                  className="h-[400px]"
+                  opts={{
+                    width: '100%',
+                    height: 500,
+                    playerVars: {
+                      // https://developers.google.com/youtube/player_parameters
+                      autoplay: 0,
+                    },
+                  }}
+                  onReady={(event) => {
+                    // access to player in all event handlers via event.target
+                    event.target.pauseVideo()
+                  }}
+                />
+              ))}
           </div>
           <div className="mt-4 flex flex-col sm:mt-8 sm:flex-row ">
             <div className="w-3/3 mb-2 flex flex-col sm:w-1/3">
