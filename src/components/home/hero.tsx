@@ -3,22 +3,43 @@ import { Loader2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
 export default function VideoPlayer() {
-  const [isVideoPlayerMounted, setIsVideoPlayerMounted] = useState(false)
+  // video control
+  const [isVideoLoading, setVideoIsLoading] = useState(true)
 
-  useEffect(() => {
-    setIsVideoPlayerMounted(true)
-  }, [])
+  const handleLoadedData = () => {
+    setVideoIsLoading(false)
+  }
+
+  const handleCanPlay = () => {
+    setVideoIsLoading(false)
+  }
+
+  const handleWaiting = () => {
+    setVideoIsLoading(true)
+  }
 
   return (
     <>
-      <div className="flex h-screen items-center justify-center">
-        {isVideoPlayerMounted ? (
-          <video autoPlay muted loop style={{ width: '100%', height: '500px' }}>
-            <source src="/assets/videos/unexpressed-feelings.mp4" />
-          </video>
-        ) : (
-          <Loader2 className="animate-spin" />
+      <div className="flex h-screen flex-col items-center justify-center">
+        {isVideoLoading && (
+          <>
+            <div className="flex flex-col items-center gap-2">
+              <Loader2 className="animate-spin text-black" />
+              <span>loading video...</span>
+            </div>
+          </>
         )}
+        <video
+          autoPlay
+          muted
+          loop
+          style={{ width: '100%', height: '500px' }}
+          onLoadedData={handleLoadedData}
+          onCanPlay={handleCanPlay}
+          onWaiting={handleWaiting}
+        >
+          <source src="/assets/videos/unexpressed-feelings.mp4" />
+        </video>
       </div>
     </>
   )
