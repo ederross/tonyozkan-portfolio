@@ -80,7 +80,8 @@ export default function ClientDetails({
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    style={{ width: '100%', height: 600 }}
+                    className="h-[200px] bg-[#fefff7] sm:h-[500px]"
+                    style={{ width: '100%' }}
                     autoPlay
                     loop
                     muted={isMuted}
