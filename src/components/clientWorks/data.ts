@@ -135,14 +135,12 @@ export const clientWorks = [
   {
     slug: 'ck-x-hero-prestom',
     name: 'CK x Heron Prestom',
-    cover:
-      'https://uc676ab1fd700acc375bd90206c9.previews.dropboxusercontent.com/p/thumb/ACHC_LkFhD8d5XBxu-wq_MGdVLpbulDXax1jsri0ND-0njOlYD1S5EhDEzKjRTuitTNUI_JhBm2ywGUpnHS-4o-awocDC9Y6ZCJftH_IQmXNSCMHlwM9pU8WJpHxncbvBeimjGuXqlV-Y8DQukiEaCxvo91E073q_auC1ZGVkTM57E0BfhE-Ww0mEcdYax6FMtxPKH2WRK9Tj62zbI6iEKwmtlnRSGPE-SD_zKigWwnx8PO5GM46Cn9vUVxJ6HwVmZ_M_GzXEQh523ptPJ2TGy5yWMQeTpmA85vIUppShWicAXVG5YaPzeNkC4sWU3cMb8cWGyOgjKK6oFfN_FCUh7DacNcrU7k6n1PI-jClWyEI8Q/p.jpeg',
+    cover: 'https://utfs.io/f/bde0c230-3452-49a6-bed9-17dba6180df2-1xb650.jpg',
     images: [
-      'https://uc7c6fe201a01b6606397220ba78.previews.dropboxusercontent.com/p/thumb/ACF2vXAXNNvqL27POTpx2HIaeVop-xKooSUd5U9cthY5aQse-zrvA66W4fCEIrGt6Xw6QziQexeHS-f-JSXPsX7NhG8xpMre5fcX2syhklkBV1Oiq1mhq9DAoIRCUygeqgH6x5X6J0R-yQzmNPlX1ZzPtJ72Z2mPcVuB_evH3CY3nUtbE1n9MxrHsKrvGVUEMdPSaBGR6ZUuh2IzWsjg43cYLB-OsDbIUlBg_t5ajtqfLzP_DLP83-gIdKvwRvzC0Zm5h7d1lq6R7Z3piqMUhGN7TOX2j1xV3tjyZZ-ay_v7qeIfe3oIX6bHVxkPVFRfiagbMT3sB2BWgjcHyuYaz7WB3e2PrMIukuzTIlmF3a-WDA/p.jpeg',
-
-      'https://uc461f15bbe52abf430f2bf318e6.previews.dropboxusercontent.com/p/thumb/ACGGZG6YH0AIe-lKmsMoE1TMRaBWQF87jQhKFgvi0vWUck7cJz_ep_m5r-6xv9amICgIneIGUJBSVchvZ9NFS9Vyy6e-0uQ4rVszurrWbBOLuUpiBZSbCrA3EAdxtampP-HUtIjRtOBbw2RSLVMOdnwycQ_FxqvFN9GPl1Fc61ULTY0AiRZZ2HE2RcRuxopL4KC8klKsJu0bzm2ybvjEwAM6BIbdZeR95rYG0BpdE2BHahE4xzQRvjOMFXNcagET1FL2eRsT9Qc-I8KxdSTvARLJZtbKkq2ndCcagHcqH5XVTroE8DAFXVaILZFC9Tz9J5jCltcCGFW41m5pXenYhjIgDHW4KLvUlnFzHw26zye-6A/p.jpeg',
-
-      'https://uce6b462d4f5cbad02bd482d4170.previews.dropboxusercontent.com/p/thumb/ACHr3V1EJ71mANkYpyzZEW8eCHqfUYKNZGcdZM2bSZAYrK4dJkNRj1ezYjY7amwS9pgnzPTN2tdbAu9mOCqqW255lL7X6LZm0KEx5xRwXP0ggf4IjocHv6HqgbPj4vATsNEoJLzwIkRqpgdwTs1SfEY5rkcxLESvvxMfi2v_9pXWMjUBfW0Gwws7T59b0CtQVSvENNw2M1yzyr0ZRvTuvRzH9aqy_5i9MkJYRUKfaUk74q3CiXu9vSJPBkNg7qdVmheZLTbFX9RFiy5MApCPiSmYSCYB0rjseQ6kQdkXAZFsWXllH8322pez7s6iAx-TB89yOhMkR2iTU3Wzfilmf5C09ZbNw0LAv4Vo3WcHvki1fQ/p.jpeg',
+      'https://utfs.io/f/a46bed18-ced9-4348-ba50-06a441fa6eab-1xb5b2.jpg',
+      'https://utfs.io/f/bde0c230-3452-49a6-bed9-17dba6180df2-1xb650.jpg',
+      'https://utfs.io/f/38548b5e-3604-4c4c-b626-8b2edf88f53c-1xb5b1.jpg',
+      'https://utfs.io/f/8c7eefba-ecd1-4f66-9842-b1bd319c1eff-1xb5bt.jpg',
     ],
     videos: [],
   },
@@ -150,14 +148,12 @@ export const clientWorks = [
   {
     slug: 'mavi-all-blue',
     name: 'Mavi all blue',
-    cover:
-      'https://uc770a3d99f440d04e9a365cf5ba.previews.dropboxusercontent.com/p/thumb/ACFkBxBIttqobT5ZDNyCobwzfcSIc5H6dHDZTAs8T-S5EWj5z7wcsU7IKa4WghdtnBa0SMUfL-t2o4pqzRvI2mCFkdABsdAPjVbqoU98xqnfRang999zLtCejhw0HDnET5KDgUDgfpVBNpgjPG7zvcM0_dAzOEb5tWR-x1_w-prhPFTUGyIaQ50mP7sRXOqx1NsxZ0QNX1Gj93RKrqC8-M6SQoNmOajmKT3nDcOsBM8VPP3CyeVD6WN2jPG_S5N-2We78A-c0eIbDXYFEMTZraZvlBSt6x1ntqpzWvHpMjfcPB2hY_YFkYyq53Kh7LTRFo5OP7rx7PbuSlsKj5dv7avkiSThf4VnY68p3zIQYGpQlTecVGboieuFgPl-9bLG_xsTC5IF7mqr6KySbAVs_unV49TJXwL3yvBcRtp106sYWA/p.jpeg',
+    cover: 'https://utfs.io/f/345d0725-981d-4826-8a57-00fe957b9d8e-fdrfzy.jpg',
     images: [
-      'https://uc4ac5b6b3cd50dadadfac166d5d.previews.dropboxusercontent.com/p/thumb/ACEv63nU2wr9rQysdvL8ozYfCazdxGo4lXNH0i997rXV3l75VVfDl8VnDLgaXIovICDrqljrSl6dmZ5GINDYFDXq62wMq06Z3sOR91-jsti2GxqlyH5UZEu4j2g3ADKJT1_PQ800eTlk5KSz96KGs5LJtr2tQrxfAyqRMw4ianzQLHaoaoVGyxfDWGxHvWeYsqPDVlkJhVcwNYCRohLeIn2QEF1r9fwVsnCoHCQT8Fc8IGP4nsX_drLs3Is4pl48ymWl2d31L39pEhXtQkiCBFuH9bOGKqCMTa0nuKYRDamhec2sdXKhZbuijIRB-8V19M4P5MhFDXx-UtnOhplXn8RDMYlDhT4saep2DP2lMVzQRAd-s0ewaWdKvKn96Bu4CHaT3oho9zUlfqAcvHHOT5NNozdPCQiR5XNt7qrhb0X8Qg/p.jpeg',
-      'https://ucedede2fec3df8677d00851efca.previews.dropboxusercontent.com/p/thumb/ACGBr6iN0Cq3WorZgeDkUycpeOyPzigluQ6m3RpcnVipRd1p5VmY6T1jxPaxA8BIH4lrhj2yvYc2tSKIkPvPwrojUl_ieiRtgMhy_DZqInQGGQR5zLPHph_00PJ19S0WKVpddB2TbLUGlr7bslctfRtuXEq4a_e26ptvU2oEU7mbIm7rlD_kSnuUJSI7Kj45tWWrf0Q494lf48-r3S7Q8-NcESDnX4Hh7BtPsuYS9Bs7fGGJJwlBgC8aMBldOhxnNmcWmVYQadZhac8UQiMVDbL7ppaKaHUQ27_P6qhBO-ZOv16kmePD639tLsauCLaFx_EINy813aey0ZKDQhvjUhRRhHgDBngJ9tmnXmiYm8bmz_AtL1JvrjiSr63UZiIvi3Pn0EMqKr75LFmer_PK4Vl38l9Lr2EeCj4Ia71LLtzyBQ/p.jpeg',
-      'https://uc770a3d99f440d04e9a365cf5ba.previews.dropboxusercontent.com/p/thumb/ACGlMbbMcKwOErGaturuJ88SXgWdCp9pNJzUjkvnoKCO6jcwwLhbx7sMBi00jB2yPGdCl171OkODOJuTuTyXUV5BLJ9EGEzUdcfqpjk7YTMQo501haMRfi7XCSky4syxB95_EsKH_u0O72d_bBMtc4mYT5rj2yZvVVlivT5athMB6nxzoAb297Fi4SUrDeDnyvxf0OGMa0C1CLKLKmcfD8xJ-y0ZqGR0kvf5bm4-GyUp9iirMziBCsppq9XTroEiQLZDI6EEhtlZNSwRMhG4Bao3uUJ1w3l4iwwL9ovM0YyrahpNZ76Xljzh9plfCdM0gDADMi2zpT5sV1HEHbT1UITxQITx81ATk_J1wQYopdykW_BaWF4dM9CatjtvWKY27_aRIGpkWTuKBhWuaVLVeXe_GskEqNg3av4eld4gfZui8w/p.jpeg',
-      'https://ucc4e3ceb6f54f2b3c606ce7b8a3.previews.dropboxusercontent.com/p/thumb/ACGLJ84fKxwpqh6Jzs4K7xeXca16eOpFD7WM4EjcPJSx3Rszgy8D8IU7tyWYE236HYGPUpfPu2YJJ8iSS_5v45B4M0B-ablZRx9l2lTcsLO32dATnyyXCUXu2qiK37-XYQY29KNtIwgbgWGaESDhtCAC5vofYZOJB_6fETIAtk0JaPlJuLky989RLJ0eQWGwQVb03tFZxSuUcp8oO6JwGZb7Ys8E22M-arZXlCtdk7oywpm6jPKhG56SyArxFpcqie4byIhinMJ3fi7cZ1hO68Y84XjgYfS6cuhycVOh4wIW2wkxpbZD6TOTgzbJSjljzo4Ov5zUmDHG-QQC9WlBGTHQxf1_5EZazzo6iTxrAIkL0Y0ugfBPRowE2myS2O7qKWCY-OcWoiCj1-yDORhk_oF6Q9BBWNIo3lOEMAVH9nusaA/p.jpeg',
-      'https://ucb2734dc3fc544ef796bfb1e4e4.previews.dropboxusercontent.com/p/thumb/ACHbvcGkMNigh5LG6DW0SgR6zaH8p4mQjCYWOygqV14rInRO3bYNIfKkmdGW-MOeX3BVmKl8EkcNAgT7LChJWjJAZUKFloDiKZRzcdKV3V1eENrC587nbo7ViKk0xn6cFUdF8QfeGgzUHe7YGopJS3k3UQ6PTGbGsCJMmnZquNPfWxgRqLwI6v5LLLnDRE_Z7jiRp3PrFVUAWWk48HOWgw_33Bx1Eep5NdDLgs8Zlu7e0sy1tQ_iaNhKXIci6yyZZiTn8mTazwYdZ8OC_IPdbARh02I1bsJ20NcYK9qXX_zJSQfM56gqqMdcxZBrMyUeex6EYQcZzUfXD245nWGdKp-bb9pkjsZEt93koDlh-PVoYQ8OVYuoiA89LXTcxe4eIrzH2xaIAS_QtRv6bK5gDwszOGGUYTidBdk9s7vMFMm_Yw/p.jpeg',
+      'https://utfs.io/f/e890a059-677f-44e0-af45-27f2ab46b6f1-77lmzv.jpg',
+      'https://utfs.io/f/229b3851-6115-4508-9baa-20e2e117d37d-fdrg1o.jpg',
+      'https://utfs.io/f/0a8b9cf1-012e-44a8-b330-af9a0e51bca3-kd5n35.jpg',
+      'https://utfs.io/f/7261b4ef-aa51-416f-a969-e65e3a643383-77ln1k.jpg',
     ],
     videos: [],
   },
