@@ -67,7 +67,7 @@ export const clientWorks = [
     videos: [],
   },
   {
-    slug: 'cd-underwear',
+    slug: 'ck-underwear',
     name: 'CK underwear',
     // videoCover:
     //   'https://utfs.io/f/2b75bc94-4d71-49b7-bd8f-5aaeb3d38bc5-f3wx36.mp4',
@@ -78,9 +78,7 @@ export const clientWorks = [
       'https://utfs.io/f/c09ff889-bdef-4f9f-8e3f-cf2924cfb55e-28jhnc.jpg',
       'https://utfs.io/f/99d20779-234e-4b00-b3bb-8e62905acec4-lgym3s.jpg',
     ],
-    videos: [
-      'https://utfs.io/f/2b75bc94-4d71-49b7-bd8f-5aaeb3d38bc5-f3wx36.mp4',
-    ],
+    videos: ['/assets/videos/tony_ck_video_v2.mp4'],
   },
 
   {
