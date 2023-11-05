@@ -48,25 +48,25 @@ export const portfolioData = [
   },
   {
     slug: '12',
-    image: ' https://utfs.io/f/49fe3620-01e7-4be6-9685-6ee0b9f9ab2d-pxivpj.jpg',
+    image: 'https://utfs.io/f/49fe3620-01e7-4be6-9685-6ee0b9f9ab2d-pxivpj.jpg',
   },
 
   {
     slug: '13',
-    image: ' https://utfs.io/f/e9dc2ed4-2a57-47b5-8abb-be57789cfe54-1xd89r.jpg',
+    image: 'https://utfs.io/f/e9dc2ed4-2a57-47b5-8abb-be57789cfe54-1xd89r.jpg',
   },
   {
     slug: '14',
-    image: ' https://utfs.io/f/20c9a6a1-a42b-4f83-9705-939732f8568f-1xd89t.jpg',
+    image: 'https://utfs.io/f/20c9a6a1-a42b-4f83-9705-939732f8568f-1xd89t.jpg',
   },
   {
     slug: '15',
-    image: ' https://utfs.io/f/a6cd035e-3d21-4c04-88c8-a11b78fd7cbe-1xd8ah.jpg',
+    image: 'https://utfs.io/f/a6cd035e-3d21-4c04-88c8-a11b78fd7cbe-1xd8ah.jpg',
   },
 
   {
     slug: '16',
-    image: ' https://utfs.io/f/13c8e66d-4923-44f3-b2e2-397e1d816cc7-1xd8ai.jpg',
+    image: 'https://utfs.io/f/13c8e66d-4923-44f3-b2e2-397e1d816cc7-1xd8ai.jpg',
   },
   {
     slug: '17',
