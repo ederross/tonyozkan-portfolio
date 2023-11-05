@@ -1,16 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
-import Image from 'next/image'
 
 import { useCallback, useEffect, useState } from 'react'
 import { clientWorks } from './data'
 
 import { motion } from 'framer-motion'
+import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import ClientDetails from './ClientDetails'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
-import { Loader2 } from 'lucide-react'
+import ClientDetails from './ClientDetails'
 
 export default function Grid3Images() {
   const searchParams = useSearchParams()

@@ -7,6 +7,8 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { portfolioData } from './data'
 import PortfolioDetails from './portfolioDetails'
+import { motion } from 'framer-motion'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 export default function SideToSideContent() {
   const searchParams = useSearchParams()
@@ -102,17 +104,27 @@ export default function SideToSideContent() {
               ) : (
                 portfolioData?.map((data, key) => (
                   <Link key={key} href={`?image=${data.slug}`}>
-                    <div
-                      key={key}
-                      className="relative h-[300px] cursor-pointer overflow-hidden"
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                      className="flex h-[400px] w-full items-center justify-center overflow-hidden "
                     >
-                      <Image
-                        fill
-                        className="object-contain duration-1000 ease-out hover:scale-[2]"
-                        alt="NextUI hero Image"
-                        src={data.image as string}
-                      />
-                    </div>
+                      <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[2]">
+                        <AvatarImage
+                          className="object-cover"
+                          src={data.image}
+                          alt={`store profile picture`}
+                          suppressHydrationWarning
+                        />
+                        <AvatarFallback
+                          className="rounded-md"
+                          suppressHydrationWarning
+                        >
+                          <Loader2 className="animate-spin text-slate-500" />
+                        </AvatarFallback>
+                      </Avatar>
+                    </motion.div>
                   </Link>
                 ))
               )}

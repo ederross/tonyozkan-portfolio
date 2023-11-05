@@ -53,7 +53,7 @@ export default function PortfolioDetails({
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 10 }}
               transition={{ ease: 'easeInOut', duration: 0.6 }}
-              className="relative h-[600px] bg-slate-50"
+              className="relative h-[600px]"
             >
               <Image
                 priority
