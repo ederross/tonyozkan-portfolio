@@ -84,7 +84,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 10 }}
                     transition={{ ease: 'easeInOut', duration: 0.6 }}
-                    className="relative h-[200px] bg-black sm:h-[100px]"
+                    className="bg-bg-slate relative h-[200px] sm:h-[100px]"
                   >
                     <Image
                       priority
