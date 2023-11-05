@@ -2,6 +2,11 @@ export {}
 
 declare global {
   //* Interfaces
+  interface IPortfolio {
+    slug: string
+    name?: string
+    image: string
+  }
   interface IClientWork {
     slug: string
     name: string

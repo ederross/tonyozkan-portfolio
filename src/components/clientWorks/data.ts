@@ -149,6 +149,7 @@ export const clientWorks = [
       'https://utfs.io/f/229b3851-6115-4508-9baa-20e2e117d37d-fdrg1o.jpg',
       'https://utfs.io/f/0a8b9cf1-012e-44a8-b330-af9a0e51bca3-kd5n35.jpg',
       'https://utfs.io/f/7261b4ef-aa51-416f-a969-e65e3a643383-77ln1k.jpg',
+      'https://utfs.io/f/345d0725-981d-4826-8a57-00fe957b9d8e-fdrfzy.jpg',
     ],
     videos: [],
   },

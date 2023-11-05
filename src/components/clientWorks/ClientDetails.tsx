@@ -115,7 +115,7 @@ export default function ClientDetails({
               >
                 <Avatar className="h-full w-full rounded-lg">
                   <AvatarImage
-                    className="bg-[#fefff7] object-contain"
+                    className="bg-slate-50 object-contain"
                     src={data}
                     alt={`store profile picture`}
                     suppressHydrationWarning
