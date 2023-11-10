@@ -50,8 +50,8 @@ export default function PortfolioDetails({
 
           <div className="h-[600px] w-full">
             <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={{ opacity: 1, y: 10 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ ease: 'easeInOut', duration: 0.6 }}
               className="relative h-[600px]"
             >
