@@ -73,7 +73,7 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
           </div>
           <div className="mt-4 flex flex-col sm:mt-8 sm:flex-row ">
             <div className="w-3/3 mb-2 flex flex-col sm:w-1/3">
-              <h2 className="my-1 text-3xl sm:text-4xl">Screenshots</h2>
+              <h2 className="my-1 text-3xl sm:text-4xl">Stills</h2>
               <p>See the captures of this great work.</p>
             </div>
             <div className="w-3/3 sm:w-2/3">
