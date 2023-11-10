@@ -110,7 +110,7 @@ export default function SideToSideContent() {
                       transition={{ duration: 0.6 }}
                       className="flex h-[400px] w-full items-center justify-center overflow-hidden "
                     >
-                      <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[2]">
+                      <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.2]">
                         <AvatarImage
                           className="object-cover"
                           src={data.image}
