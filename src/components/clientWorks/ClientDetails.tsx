@@ -1,13 +1,17 @@
 'use client'
+
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
-import { PhotoProvider, PhotoView } from 'react-photo-view'
+
+import Link from 'next/link'
 
 import { Loader2, Volume2, VolumeX, X } from 'lucide-react'
-import 'react-photo-view/dist/react-photo-view.css'
+
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+
+import { PhotoProvider, PhotoView } from 'react-photo-view'
+import 'react-photo-view/dist/react-photo-view.css'
 
 interface Client {
   name: string

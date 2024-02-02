@@ -1,11 +1,17 @@
 'use Film'
-import { VideoIcon, X } from 'lucide-react'
-import Link from 'next/link'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
-import { motion } from 'framer-motion'
 import Image from 'next/image'
+import Link from 'next/link'
+
+import { VideoIcon, X } from 'lucide-react'
+
+import { motion } from 'framer-motion'
+
 import YouTube from 'react-youtube'
+
+import { PhotoProvider, PhotoView } from 'react-photo-view'
+import 'react-photo-view/dist/react-photo-view.css'
 
 interface Props {
   selectedFilm: IFilm
@@ -77,25 +83,29 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
               <p>See the captures of this great work.</p>
             </div>
             <div className="w-3/3 sm:w-2/3">
-              <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
-                {selectedFilm?.images.map((data, key) => (
-                  <motion.div
-                    key={key + Math.random()}
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 10 }}
-                    transition={{ ease: 'easeInOut', duration: 0.6 }}
-                    className="bg-bg-slate relative h-[200px] sm:h-[100px]"
-                  >
-                    <Image
-                      priority
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      alt="NextUI hero Image"
-                      src={data}
-                    />
-                  </motion.div>
-                ))}
-              </div>
+              <PhotoProvider>
+                <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
+                  {selectedFilm?.images.map((data, key) => (
+                    <motion.div
+                      key={key + Math.random()}
+                      initial={{ opacity: 0, y: 100 }}
+                      animate={{ opacity: 1, y: 10 }}
+                      transition={{ ease: 'easeInOut', duration: 0.6 }}
+                      className="bg-bg-slate relative h-[200px] cursor-pointer sm:h-[100px]"
+                    >
+                      <PhotoView key={key} src={data}>
+                        <Image
+                          priority
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          alt="NextUI hero Image"
+                          src={data}
+                        />
+                      </PhotoView>
+                    </motion.div>
+                  ))}
+                </div>
+              </PhotoProvider>
             </div>
           </div>
         </div>

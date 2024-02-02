@@ -1,14 +1,21 @@
 'use client'
+
 import { useCallback, useEffect, useState } from 'react'
 
-import { Loader2 } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
+
+import { Loader2 } from 'lucide-react'
+
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+
+import { motion } from 'framer-motion'
+
+import { PhotoProvider, PhotoView } from 'react-photo-view'
+import 'react-photo-view/dist/react-photo-view.css'
+
 import { portfolioData } from './data'
 import PortfolioDetails from './portfolioDetails'
-import { motion } from 'framer-motion'
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
 export default function SideToSideContent() {
   const searchParams = useSearchParams()
@@ -77,27 +84,9 @@ export default function SideToSideContent() {
 
   return (
     <>
-      <div className="py-6 sm:py-8 lg:py-12">
-        <div className="mx-auto max-w-screen-xl px-4 md:px-4">
-          <div className="grid gap-8 md:grid-cols-3 lg:gap-12">
-            <div className="sticky  top-10 col-span-1">
-              <div className="h-64 overflow-hidden rounded-lg md:h-auto">
-                {/* <h2 className="mb-4 text-center text-[36px] font-normal md:text-left">
-                  My approach
-                </h2>
-
-                <p className="text-center text-xs font-light   sm:text-xs md:text-left">
-                  My approach is based in a felt-perception of alignment. I am
-                  often approached by those seeking a perspective within a body
-                  of work that tells a story.I enjoy allowing freedom to fall
-                  within my approach and later structuring the bones of what
-                  will come to be. But it all begins with a mirror, visualizing
-                  myself within the space, within the message, within the
-                  moment.
-                </p> */}
-              </div>
-            </div>
-
+      <div className="pb-6">
+        <div className="mx-auto max-w-screen-xl px-4 pt-28 md:px-4 lg:pt-36">
+          <div className="flex w-full flex-col items-center gap-8  md:grid-cols-3 lg:grid lg:gap-12">
             <div className="col-span-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:gap-16">
               {portfolioData
                 ?.map((data, key) => (
@@ -128,7 +117,7 @@ export default function SideToSideContent() {
                 .slice(0, 2)}
             </div>
 
-            <div className="col-span-3 grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-2">
+            <div className="col-span-3 grid w-full items-center gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-2">
               {isLoading ? (
                 <Loader2 className="animate-spin" />
               ) : (

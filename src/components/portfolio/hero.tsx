@@ -8,7 +8,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="mx-auto mt-16 flex w-full items-center justify-center overflow-hidden">
+    <div className="mx-auto mt-0 flex w-full items-center justify-center overflow-hidden">
       {/* <h2
         id={'tony'}
         className="break-keep text-center text-[14vw] font-extralight tracking-tighter"

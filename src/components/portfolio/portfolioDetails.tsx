@@ -48,12 +48,12 @@ export default function PortfolioDetails({
             </Link>
           </div>
 
-          <div className="h-[300px] w-full">
+          <div className="h-[500px] w-full">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ ease: 'easeInOut', duration: 0.6 }}
-              className="relative h-[300px]"
+              className="relative h-[400px]"
             >
               <Image
                 priority
