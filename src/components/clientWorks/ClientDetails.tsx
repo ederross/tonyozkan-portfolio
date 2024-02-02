@@ -1,7 +1,9 @@
 'use client'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { PhotoProvider, PhotoView } from 'react-photo-view'
 
 import { Loader2, Volume2, VolumeX, X } from 'lucide-react'
+import 'react-photo-view/dist/react-photo-view.css'
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -104,32 +106,36 @@ export default function ClientDetails({
               </div>
             </div>
           )}
-          <div className="col-span-2 mt-8 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
-            {selectedClient?.images.map((data, key) => (
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 10 }}
-                transition={{ ease: 'easeInOut', duration: 0.6 }}
-                key={key + Math.random()}
-                className="relative  h-[500px] sm:h-[300px]"
-              >
-                <Avatar className="h-full w-full rounded-lg">
-                  <AvatarImage
-                    className="bg-slate-50 object-contain"
-                    src={data}
-                    alt={`store profile picture`}
-                    suppressHydrationWarning
-                  />
-                  <AvatarFallback
-                    className="rounded-md"
-                    suppressHydrationWarning
-                  >
-                    <Loader2 className="animate-spin text-black" />
-                  </AvatarFallback>
-                </Avatar>
-              </motion.div>
-            ))}
-          </div>
+          <PhotoProvider>
+            <div className="col-span-2 mt-8 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-8">
+              {selectedClient?.images.map((data, key) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 10 }}
+                  transition={{ ease: 'easeInOut', duration: 0.6 }}
+                  key={key + Math.random()}
+                  className="relative  h-[500px] cursor-pointer sm:h-[300px]"
+                >
+                  <PhotoView key={key} src={data}>
+                    <Avatar className="h-full w-full rounded-lg">
+                      <AvatarImage
+                        className="bg-slate-50 object-contain"
+                        src={data}
+                        alt={`store profile picture`}
+                        suppressHydrationWarning
+                      />
+                      <AvatarFallback
+                        className="rounded-md"
+                        suppressHydrationWarning
+                      >
+                        <Loader2 className="animate-spin text-black" />
+                      </AvatarFallback>
+                    </Avatar>
+                  </PhotoView>
+                </motion.div>
+              ))}
+            </div>
+          </PhotoProvider>
         </div>
       </section>
     </>
