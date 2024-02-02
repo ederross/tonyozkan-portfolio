@@ -81,8 +81,8 @@ export default function SideToSideContent() {
         <div className="mx-auto max-w-screen-xl px-4 md:px-4">
           <div className="grid gap-8 md:grid-cols-3 lg:gap-12">
             <div className="sticky  top-10 col-span-1">
-              <div className=" h-64 overflow-hidden rounded-lg md:h-auto">
-                <h2 className="mb-4 text-center text-[42px] font-normal md:text-left">
+              <div className="h-64 overflow-hidden rounded-lg md:h-auto">
+                {/* <h2 className="mb-4 text-center text-[36px] font-normal md:text-left">
                   My approach
                 </h2>
 
@@ -94,25 +94,23 @@ export default function SideToSideContent() {
                   will come to be. But it all begins with a mirror, visualizing
                   myself within the space, within the message, within the
                   moment.
-                </p>
+                </p> */}
               </div>
             </div>
 
-            <div className="col-span-2 grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-2">
-              {isLoading ? (
-                <Loader2 className="animate-spin" />
-              ) : (
-                portfolioData?.map((data, key) => (
+            <div className="col-span-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-2 xl:gap-16">
+              {portfolioData
+                ?.map((data, key) => (
                   <Link key={key} href={`?image=${data.slug}`}>
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
-                      className="flex h-[400px] w-full items-center justify-center overflow-hidden "
+                      className="flex h-[432px] w-full items-center justify-center overflow-hidden"
                     >
-                      <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.2]">
+                      <Avatar className="h-full w-full overflow-hidden rounded-none duration-1000 ease-out">
                         <AvatarImage
-                          className="object-cover"
+                          className="object-contain"
                           src={data.image}
                           alt={`store profile picture`}
                           suppressHydrationWarning
@@ -127,6 +125,42 @@ export default function SideToSideContent() {
                     </motion.div>
                   </Link>
                 ))
+                .slice(0, 2)}
+            </div>
+
+            <div className="col-span-3 grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-2">
+              {isLoading ? (
+                <Loader2 className="animate-spin" />
+              ) : (
+                <>
+                  {portfolioData
+                    ?.map((data, key) => (
+                      <Link key={key} href={`?image=${data.slug}`}>
+                        <motion.div
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ duration: 0.6 }}
+                          className="flex h-[400px] w-full items-center justify-center overflow-hidden"
+                        >
+                          <Avatar className="h-full w-full overflow-hidden rounded-none bg-transparent duration-1000 ease-out">
+                            <AvatarImage
+                              className="object-contain object-center"
+                              src={data.image}
+                              alt={`store profile picture`}
+                              suppressHydrationWarning
+                            />
+                            <AvatarFallback
+                              className="rounded-md"
+                              suppressHydrationWarning
+                            >
+                              <Loader2 className="animate-spin text-slate-500" />
+                            </AvatarFallback>
+                          </Avatar>
+                        </motion.div>
+                      </Link>
+                    ))
+                    .slice(2, 19)}
+                </>
               )}
             </div>
           </div>

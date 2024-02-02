@@ -10,6 +10,7 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import ClientDetails from './ClientDetails'
+import { cn } from '@/lib/utils'
 
 export default function Grid3Images() {
   const searchParams = useSearchParams()
@@ -50,8 +51,8 @@ export default function Grid3Images() {
     setIsCoverHovered(true)
   }
   const handleMouseLeave = (slug: string) => {
-    setHoveredSlug(slug)
     setIsCoverHovered(false)
+    setHoveredSlug('')
   }
 
   const handleClient = useCallback(() => {
@@ -71,22 +72,24 @@ export default function Grid3Images() {
             <Link
               key={key}
               href={`?client=${data.slug}`}
-              className="flex cursor-pointer items-center justify-center gap-4 overflow-hidden bg-slate-100"
+              onMouseEnter={() => handleMouseEnter(data.slug)}
+              onMouseLeave={() => handleMouseLeave(data.slug)}
+              className="group flex max-h-[400px] cursor-pointer items-center justify-center overflow-hidden bg-slate-100"
             >
-              {data.videoCover ? (
-                <>
-                  <div
-                    className="flex h-full w-full items-center justify-center overflow-hidden duration-1000 ease-out hover:scale-[2]"
-                    onMouseEnter={() => handleMouseEnter(data.slug)}
-                    onMouseLeave={() => handleMouseLeave(data.slug)}
-                  >
-                    {isVideoLoading && (
-                      <Loader2 className="animate-spin text-slate-500" />
-                    )}
+              {data.slug === hoveredSlug ? (
+                <div
+                  className={cn(
+                    'hidden h-full w-full items-center justify-center overflow-hidden',
+                    isCoverHovered && 'flex',
+                  )}
+                >
+                  {isVideoLoading && (
+                    <Loader2 className="animate-spin text-slate-500" />
+                  )}
+                  {data.videoCover ? (
                     <motion.video
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1, scale: 3 }}
-                      style={{ width: '100%' }}
+                      transition={{ duration: 1000 }}
+                      className=" overflow-hidden"
                       autoPlay
                       loop
                       muted
@@ -98,32 +101,45 @@ export default function Grid3Images() {
                       <source src={data.videoCover} type="video/mp4" />
                       Your browser does not support the video tag.
                     </motion.video>
-                  </div>
-                </>
+                  ) : (
+                    <motion.div
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                      className="flex h-[400px] w-full items-center justify-center "
+                    >
+                      <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.2]">
+                        <AvatarImage
+                          className="object-cover"
+                          src={data.cover}
+                          alt={`store profile picture`}
+                          suppressHydrationWarning
+                        />
+                        <AvatarFallback
+                          className="rounded-md"
+                          suppressHydrationWarning
+                        >
+                          <Loader2 className="animate-spin text-slate-500" />
+                        </AvatarFallback>
+                      </Avatar>
+                    </motion.div>
+                  )}
+                </div>
               ) : (
-                <>
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                    className="flex h-[400px] w-full items-center justify-center "
-                  >
-                    <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[2]">
-                      <AvatarImage
-                        className="object-cover"
-                        src={data.cover}
-                        alt={`store profile picture`}
-                        suppressHydrationWarning
-                      />
-                      <AvatarFallback
-                        className="rounded-md"
-                        suppressHydrationWarning
-                      >
-                        <Loader2 className="animate-spin text-slate-500" />
-                      </AvatarFallback>
-                    </Avatar>
-                  </motion.div>
-                </>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                  className="flex h-[400px] w-full items-center justify-center "
+                >
+                  <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.1]">
+                    <AvatarImage
+                      className="object-cover"
+                      src={data.cover}
+                      alt={`store profile picture`}
+                      suppressHydrationWarning
+                    />
+                  </Avatar>
+                </motion.div>
               )}
             </Link>
           ))}

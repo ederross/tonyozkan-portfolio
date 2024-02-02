@@ -1,16 +1,27 @@
 export const portfolioData = [
   {
-    slug: '1',
-    image: 'https://utfs.io/f/a65567fb-e33f-4bc5-ad1e-ac9626d3b2ab-rdppc7.jpg',
+    slug: '9',
+    image: 'https://utfs.io/f/bd8d5b76-7809-4bd4-84e8-ad5abbab2072-j1c9cr.jpg',
   },
   {
-    slug: '2',
-    image: 'https://utfs.io/f/f8ec71bd-40b9-4aec-94c5-12e3b7698be5-s7urzc.jpg',
+    slug: '10',
+    image:
+      'https://utfs.io/f/b7b30117-9835-45d1-8e1d-4e170eb613b0-3bgjfs.jpg  ',
   },
-  {
-    slug: '3',
-    image: 'https://utfs.io/f/00ebaf91-5e30-4d29-b4d6-d54af0dad6be-mwubn8.jpg',
-  },
+
+  // {
+  //   slug: '1',
+  //   image: 'https://utfs.io/f/a65567fb-e33f-4bc5-ad1e-ac9626d3b2ab-rdppc7.jpg',
+  // },
+
+  // {
+  //   slug: '2',
+  //   image: 'https://utfs.io/f/f8ec71bd-40b9-4aec-94c5-12e3b7698be5-s7urzc.jpg',
+  // },
+  // {
+  //   slug: '3',
+  //   image: 'https://utfs.io/f/00ebaf91-5e30-4d29-b4d6-d54af0dad6be-mwubn8.jpg',
+  // },
   {
     slug: '4',
     image: 'https://utfs.io/f/bd1774dc-f31c-43a2-b279-bc945e77ac4a-d85ask.jpg',
@@ -32,16 +43,7 @@ export const portfolioData = [
     slug: '8',
     image: 'https://utfs.io/f/c09ff889-bdef-4f9f-8e3f-cf2924cfb55e-28jhnc.jpg',
   },
-  {
-    slug: '9',
-    image: 'https://utfs.io/f/bd8d5b76-7809-4bd4-84e8-ad5abbab2072-j1c9cr.jpg',
-  },
 
-  {
-    slug: '10',
-    image:
-      'https://utfs.io/f/b7b30117-9835-45d1-8e1d-4e170eb613b0-3bgjfs.jpg  ',
-  },
   {
     slug: '11',
     image: 'https://utfs.io/f/32a8f330-3cd9-4289-9098-1d544de000d4-f0jhos.jpg',

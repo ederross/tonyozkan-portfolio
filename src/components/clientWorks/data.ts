@@ -12,6 +12,7 @@ export const clientWorks = [
     slug: 'ck-everyone-ed',
     name: 'CK everyone ed',
     cover: 'https://utfs.io/f/49fe3620-01e7-4be6-9685-6ee0b9f9ab2d-pxivpj.jpg',
+    videoCover: '/assets/videos/ckeveryoneed.MP4',
     images: [
       'https://utfs.io/f/61f8865c-2aa4-4e8b-b65a-5fb85f5e4557-kkin6h.jpg',
       'https://utfs.io/f/8bd56c67-fd58-47cf-891f-b530a92168de-1x9cro.jpg',
@@ -69,8 +70,7 @@ export const clientWorks = [
   {
     slug: 'ck-underwear',
     name: 'CK underwear',
-    // videoCover:
-    //   'https://utfs.io/f/2b75bc94-4d71-49b7-bd8f-5aaeb3d38bc5-f3wx36.mp4',
+    videoCover: '/assets/videos/tony_ck_video_v2.mp4',
     cover: 'https://utfs.io/f/c09ff889-bdef-4f9f-8e3f-cf2924cfb55e-28jhnc.jpg',
     images: [
       'https://utfs.io/f/da871318-13a6-48b2-8170-0809e74b5a79-28jhnd.jpg',

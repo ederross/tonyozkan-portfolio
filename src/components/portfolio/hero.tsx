@@ -9,12 +9,12 @@ export default function Hero() {
 
   return (
     <div className="mx-auto mt-16 flex w-full items-center justify-center overflow-hidden">
-      <h2
+      {/* <h2
         id={'tony'}
         className="break-keep text-center text-[14vw] font-extralight tracking-tighter"
       >
         Tony Özkan
-      </h2>
+      </h2> */}
     </div>
   )
 }
