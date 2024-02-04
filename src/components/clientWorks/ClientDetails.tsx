@@ -4,7 +4,7 @@ import { Dispatch, SetStateAction, useState } from 'react'
 
 import Link from 'next/link'
 
-import { Volume2, VolumeX, X } from 'lucide-react'
+import { Loader2, Volume2, VolumeX, X } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
@@ -12,8 +12,8 @@ import { motion } from 'framer-motion'
 
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
-import { Skeleton } from '../ui/skeleton'
 import { useMediaQuery } from 'usehooks-ts'
+import { Skeleton } from '../ui/skeleton'
 
 interface Client {
   name: string
@@ -72,7 +72,9 @@ export default function ClientDetails({
             <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden">
               {isVideoLoading && (
                 <>
-                  <Skeleton className="h-[500px] w-full bg-gray-200" />
+                  <div className="flex flex-col items-center gap-2">
+                    <Loader2 className="animate-spin text-gray-400" />
+                  </div>
                 </>
               )}
               <motion.video
