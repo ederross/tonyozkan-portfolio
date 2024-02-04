@@ -110,7 +110,7 @@ export default function SideToSideContent() {
                         </motion.div>
                       </>
                     ))
-                    .slice(2, 19)}
+                    .slice(2, portfolioData.length)}
                 </>
               )}
             </div>
