@@ -16,7 +16,7 @@ export default function SideToSideImages() {
                 alt="NextUI hero Image"
                 src="/assets/headshot2.jpg"
               />
-            </div>{' '}
+            </div>
           </div>
 
           <div className="flex flex-col ">

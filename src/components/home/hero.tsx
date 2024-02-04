@@ -1,10 +1,13 @@
 'use client'
+import { cn } from '@/lib/utils'
+
 import { Loader2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { Skeleton } from '../ui/skeleton'
 
 export default function VideoPlayer() {
   // video control
-  const [isVideoLoading, setVideoIsLoading] = useState(true)
+  const [isVideoLoading, setVideoIsLoading] = useState(false)
 
   const handleLoadedData = () => {
     setVideoIsLoading(false)
@@ -23,22 +26,22 @@ export default function VideoPlayer() {
       <div className="flex h-screen flex-col items-center justify-center">
         {isVideoLoading && (
           <>
-            <div className="flex flex-col items-center gap-2">
-              <Loader2 className="animate-spin text-black" />
-              <span>loading video...</span>
-            </div>
+            <Skeleton className="h-[500px] w-full bg-gray-200" />
           </>
         )}
         <video
           autoPlay
           muted
           loop
-          style={{ width: '100%', height: '500px' }}
+          className={cn(
+            'overflow-hidden object-cover',
+            isVideoLoading ? 'h-0 w-0' : 'h-[500px] w-full ',
+          )}
           onLoadedData={handleLoadedData}
           onCanPlay={handleCanPlay}
           onWaiting={handleWaiting}
         >
-          <source src="/assets/videos/unexpressed-feelings.mp4" />
+          <source src={'/assets/videos/unexpressed-feelings.mp4'} />
         </video>
       </div>
     </>
