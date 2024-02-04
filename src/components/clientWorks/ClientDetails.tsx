@@ -1,10 +1,10 @@
 'use client'
 
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { Dispatch, SetStateAction, useState } from 'react'
 
 import Link from 'next/link'
 
-import { Loader2, Volume2, VolumeX, X } from 'lucide-react'
+import { Volume2, VolumeX, X } from 'lucide-react'
 
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 
@@ -13,6 +13,7 @@ import { motion } from 'framer-motion'
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import { Skeleton } from '../ui/skeleton'
+import { useMediaQuery } from 'usehooks-ts'
 
 interface Client {
   name: string
@@ -32,6 +33,7 @@ export default function ClientDetails({
   setSelectedClient,
 }: Props) {
   const [isMuted, setIsMuted] = useState(true)
+  const isMobile = useMediaQuery('(max-width: 768px)')
 
   // video control
   const [isVideoLoading, setVideoIsLoading] = useState(true)
@@ -77,15 +79,15 @@ export default function ClientDetails({
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="h-[200px] bg-transparent sm:h-[500px]"
+                className="h-[500px] bg-transparent sm:h-[500px]"
                 style={{ width: '100%' }}
                 autoPlay
+                controls={isMobile}
                 loop
                 muted={isMuted}
                 onLoadedData={handleLoadedData}
                 onCanPlay={handleCanPlay}
                 onWaiting={handleWaiting}
-                controls={false}
               >
                 <source src={selectedClient.videos[0]} type="video/mp4" />
               </motion.video>

@@ -37,6 +37,7 @@ export default function VideoPlayer() {
             'overflow-hidden object-cover',
             isVideoLoading ? 'h-0 w-0' : 'h-[500px] w-full ',
           )}
+          controls
           onLoadedData={handleLoadedData}
           onCanPlay={handleCanPlay}
           onWaiting={handleWaiting}
