@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 
 import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
+import { Skeleton } from '../ui/skeleton'
 
 interface Client {
   name: string
@@ -128,11 +129,8 @@ export default function ClientDetails({
                         alt={`store profile picture`}
                         suppressHydrationWarning
                       />
-                      <AvatarFallback
-                        className="rounded-md"
-                        suppressHydrationWarning
-                      >
-                        <Loader2 className="animate-spin text-black" />
+                      <AvatarFallback suppressHydrationWarning>
+                        <Skeleton className="h-full w-full rounded-none bg-gray-200 " />
                       </AvatarFallback>
                     </Avatar>
                   </PhotoView>

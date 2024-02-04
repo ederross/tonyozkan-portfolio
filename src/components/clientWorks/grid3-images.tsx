@@ -11,6 +11,7 @@ import { useSearchParams } from 'next/navigation'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
 import ClientDetails from './ClientDetails'
 import { cn } from '@/lib/utils'
+import { Skeleton } from '../ui/skeleton'
 
 export default function Grid3Images() {
   const searchParams = useSearchParams()
@@ -84,7 +85,7 @@ export default function Grid3Images() {
                   )}
                 >
                   {isVideoLoading && (
-                    <Loader2 className="animate-spin text-slate-500" />
+                    <Skeleton className="h-[300px] w-full rounded-none bg-gray-200 " />
                   )}
                   {data.videoCover ? (
                     <motion.video
@@ -114,11 +115,8 @@ export default function Grid3Images() {
                           alt={`store profile picture`}
                           suppressHydrationWarning
                         />
-                        <AvatarFallback
-                          className="rounded-md"
-                          suppressHydrationWarning
-                        >
-                          <Loader2 className="animate-spin text-slate-500" />
+                        <AvatarFallback suppressHydrationWarning>
+                          <Skeleton className="h-full w-full rounded-none bg-gray-200 " />
                         </AvatarFallback>
                       </Avatar>
                     </motion.div>
@@ -138,6 +136,9 @@ export default function Grid3Images() {
                       alt={`store profile picture`}
                       suppressHydrationWarning
                     />
+                    <AvatarFallback suppressHydrationWarning>
+                      <Skeleton className="h-full w-full rounded-none bg-gray-200 " />
+                    </AvatarFallback>
                   </Avatar>
                 </motion.div>
               )}
