@@ -3,7 +3,7 @@ export {}
 declare global {
   //* Interfaces
   interface IPortfolio {
-    slug: string
+    slug: string | number
     name?: string
     image: string
   }

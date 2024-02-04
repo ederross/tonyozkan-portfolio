@@ -67,14 +67,14 @@ export default function Grid3Images() {
   return (
     <>
       <div className="px-4">
-        <div className="my-8 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="my-8 grid grid-cols-2 gap-4 md:grid-cols-3">
           {clientWorks.map((data, key) => (
             <Link
               key={key}
               href={`?client=${data.slug}`}
               onMouseEnter={() => handleMouseEnter(data.slug)}
               onMouseLeave={() => handleMouseLeave(data.slug)}
-              className="group flex max-h-[400px] cursor-pointer items-center justify-center overflow-hidden bg-slate-100"
+              className="group flex max-h-[300px] cursor-pointer items-center justify-center overflow-hidden bg-slate-100"
             >
               {data.slug === hoveredSlug ? (
                 <div
@@ -89,7 +89,7 @@ export default function Grid3Images() {
                   {data.videoCover ? (
                     <motion.video
                       transition={{ duration: 1000 }}
-                      className=" overflow-hidden"
+                      className=" scale-150 overflow-hidden object-cover"
                       autoPlay
                       loop
                       muted

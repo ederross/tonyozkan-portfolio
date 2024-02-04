@@ -10,7 +10,7 @@ import { motion } from 'framer-motion'
 
 import YouTube from 'react-youtube'
 
-import { PhotoProvider, PhotoView } from 'react-photo-view'
+import { PhotoProvider, PhotoSlider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 
 interface Props {
@@ -19,6 +19,8 @@ interface Props {
 }
 export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
   const [isMuted, setIsMuted] = useState(true)
+  const [visible, setVisible] = useState(false)
+  const [index, setIndex] = useState(0)
 
   const [isVideoPlayerMounted, setIsVideoPlayerMounted] = useState(false)
 
@@ -83,29 +85,42 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
               <p>See the captures of this great work.</p>
             </div>
             <div className="w-3/3 sm:w-2/3">
-              <PhotoProvider>
-                <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
-                  {selectedFilm?.images.map((data, key) => (
-                    <motion.div
-                      key={key + Math.random()}
-                      initial={{ opacity: 0, y: 100 }}
-                      animate={{ opacity: 1, y: 10 }}
-                      transition={{ ease: 'easeInOut', duration: 0.6 }}
-                      className="bg-bg-slate relative h-[200px] cursor-pointer sm:h-[100px]"
-                    >
-                      <PhotoView key={key} src={data}>
-                        <Image
-                          priority
-                          fill
-                          style={{ objectFit: 'contain' }}
-                          alt="NextUI hero Image"
-                          src={data}
-                        />
-                      </PhotoView>
-                    </motion.div>
-                  ))}
-                </div>
-              </PhotoProvider>
+              <div className="col-span-2 grid gap-16 sm:grid-cols-2 md:gap-6 lg:grid-cols-3 xl:gap-4">
+                {selectedFilm?.images.map((data, key) => (
+                  <motion.div
+                    key={key + Math.random()}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 10 }}
+                    onClick={() => {
+                      setVisible(true)
+                      setIndex(key)
+                    }}
+                    transition={{ ease: 'easeInOut', duration: 0.6 }}
+                    className="bg-bg-slate relative h-[200px] cursor-pointer sm:h-[100px]"
+                  >
+                    {/* <PhotoView key={key} src={data}> */}
+                    <Image
+                      priority
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      alt="NextUI hero Image"
+                      src={data}
+                    />
+                    {/* </PhotoView> */}
+                  </motion.div>
+                ))}
+              </div>
+
+              <PhotoSlider
+                images={selectedFilm?.images.map((item) => ({
+                  src: item,
+                  key: item,
+                }))}
+                visible={visible}
+                onClose={() => setVisible(false)}
+                index={index}
+                onIndexChange={setIndex}
+              />
             </div>
           </div>
         </div>
