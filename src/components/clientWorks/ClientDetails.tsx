@@ -33,8 +33,6 @@ export default function ClientDetails({
 }: Props) {
   const [isMuted, setIsMuted] = useState(true)
 
-  const [isVideoPlayerMounted, setIsVideoPlayerMounted] = useState(false)
-
   // video control
   const [isVideoLoading, setVideoIsLoading] = useState(true)
 
@@ -49,10 +47,6 @@ export default function ClientDetails({
   const handleWaiting = () => {
     setVideoIsLoading(true)
   }
-
-  useEffect(() => {
-    setIsVideoPlayerMounted(true)
-  }, [])
 
   return (
     <>
@@ -76,10 +70,7 @@ export default function ClientDetails({
             <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden">
               {isVideoLoading && (
                 <>
-                  <div className="flex flex-col items-center gap-2">
-                    <Loader2 className="animate-spin text-black" />
-                    <span>loading video...</span>
-                  </div>
+                  <Skeleton className="h-[500px] w-full bg-gray-200" />
                 </>
               )}
               <motion.video

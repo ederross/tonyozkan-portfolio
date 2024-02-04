@@ -4,14 +4,13 @@
 import { useCallback, useEffect, useState } from 'react'
 import { clientWorks } from './data'
 
+import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
-import { Loader2 } from 'lucide-react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
-import ClientDetails from './ClientDetails'
-import { cn } from '@/lib/utils'
 import { Skeleton } from '../ui/skeleton'
+import ClientDetails from './ClientDetails'
 
 export default function Grid3Images() {
   const searchParams = useSearchParams()

@@ -5,6 +5,8 @@ import VideoDetails from './videoDetails'
 import { useCallback, useEffect, useState } from 'react'
 import { filmData } from './data'
 import Link from 'next/link'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import { Skeleton } from '../ui/skeleton'
 
 export default function VideosDynamic() {
   const searchParams = useSearchParams()
@@ -48,14 +50,17 @@ export default function VideosDynamic() {
         {filmData.map((data, key) => (
           <div key={key} className="mb-16 flex flex-col gap-2">
             <Link href={`?film=${data.slug}`}>
-              <div
-                className="h-[300px] w-full bg-slate-200 sm:h-[600px]"
-                style={{
-                  backgroundImage: `url('${data.cover}')`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              ></div>
+              <Avatar className="h-[300px] w-full overflow-hidden rounded-none sm:h-[600px]">
+                <AvatarImage
+                  className="object-cover"
+                  src={data.cover}
+                  alt={`store profile picture`}
+                  suppressHydrationWarning
+                />
+                <AvatarFallback suppressHydrationWarning>
+                  <Skeleton className="h-full w-full rounded-none bg-gray-200 " />
+                </AvatarFallback>
+              </Avatar>
             </Link>
             <span>{data.name}</span>
           </div>

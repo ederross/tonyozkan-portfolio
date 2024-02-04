@@ -10,23 +10,18 @@ import { motion } from 'framer-motion'
 
 import YouTube from 'react-youtube'
 
-import { PhotoProvider, PhotoSlider, PhotoView } from 'react-photo-view'
+import { PhotoSlider } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import { Skeleton } from '../ui/skeleton'
 
 interface Props {
   selectedFilm: IFilm
   setSelectedFilm: Dispatch<SetStateAction<IFilm | undefined>>
 }
 export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
-  const [isMuted, setIsMuted] = useState(true)
   const [visible, setVisible] = useState(false)
   const [index, setIndex] = useState(0)
-
-  const [isVideoPlayerMounted, setIsVideoPlayerMounted] = useState(false)
-
-  useEffect(() => {
-    setIsVideoPlayerMounted(true)
-  }, [])
 
   return (
     <>
@@ -68,12 +63,10 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                     width: '100%',
                     height: 500,
                     playerVars: {
-                      // https://developers.google.com/youtube/player_parameters
                       autoplay: 0,
                     },
                   }}
                   onReady={(event) => {
-                    // access to player in all event handlers via event.target
                     event.target.pauseVideo()
                   }}
                 />
@@ -98,15 +91,17 @@ export default function VideoDetails({ selectedFilm, setSelectedFilm }: Props) {
                     transition={{ ease: 'easeInOut', duration: 0.6 }}
                     className="bg-bg-slate relative h-[200px] cursor-pointer sm:h-[100px]"
                   >
-                    {/* <PhotoView key={key} src={data}> */}
-                    <Image
-                      priority
-                      fill
-                      style={{ objectFit: 'contain' }}
-                      alt="NextUI hero Image"
-                      src={data}
-                    />
-                    {/* </PhotoView> */}
+                    <Avatar className="h-[200px] w-full overflow-hidden rounded-none sm:h-[100px]">
+                      <AvatarImage
+                        className="object-contain"
+                        src={data}
+                        alt={`store profile picture`}
+                        suppressHydrationWarning
+                      />
+                      <AvatarFallback suppressHydrationWarning>
+                        <Skeleton className="h-full w-full rounded-none bg-gray-200 " />
+                      </AvatarFallback>
+                    </Avatar>
                   </motion.div>
                 ))}
               </div>
