@@ -85,16 +85,20 @@ export default function Grid3Images() {
                   )}
                 >
                   {isVideoLoading && (
-                    <Skeleton className="h-[300px] w-full rounded-none bg-gray-200 " />
+                    <Skeleton className="h-[300px] w-full bg-gray-200 " />
                   )}
                   {data.videoCover ? (
                     <motion.video
                       transition={{ duration: 1000 }}
-                      className=" scale-150 overflow-hidden object-cover"
+                      className={cn(
+                        'scale-150 overflow-hidden object-cover',
+                        isVideoLoading ? 'w-0' : 'w-full',
+                      )}
                       autoPlay
                       loop
                       muted
                       onLoadedData={handleLoadedData}
+                      preload={'metadata'}
                       onCanPlay={handleCanPlay}
                       onWaiting={handleWaiting}
                       controls={false}
