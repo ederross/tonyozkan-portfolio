@@ -10,12 +10,11 @@ export default function Film() {
           </div>
           <div className="flex-1">
             <p className="text-justify text-xs font-light sm:text-left sm:text-sm">
-              My approach is based in a felt-perception of alignment. I am often
-              approached by those seeking a perspective within a body of work
-              that tells a story.I enjoy allowing freedom to fall within my
-              approach and later structuring the bones of what will come to be.
-              But it all begins with a mirror, visualizing myself within the
-              space, within the message, within the moment.
+              I came to NewYork City in 2022 to pursue acting full time and I
+              fell in love with the creative process of Film. My passion lies in
+              storytelling whether it’s through directing or acting. Film gives
+              me endless critic options to express myself and emerging in that
+              world is truly a gift.
             </p>
           </div>
         </div>

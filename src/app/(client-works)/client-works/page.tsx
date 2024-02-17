@@ -12,12 +12,12 @@ export default function ClientWorks() {
           </div>
           <div className="flex-1">
             <p className="text-justify text-xs font-light sm:text-left sm:text-sm">
-              My approach is based in a felt-perception of alignment. I am often
-              approached by those seeking a perspective within a body of work
-              that tells a story.I enjoy allowing freedom to fall within my
-              approach and later structuring the bones of what will come to be.
-              But it all begins with a mirror, visualizing myself within the
-              space, within the message, within the moment.
+              Tony is known for his creative approach with brand partnerships.
+              Every campaign is a new chance to explore myself in different ways
+              aligning the brands vision. I enjoy executing brands visions and
+              bringing my own creativity into their process and message. Video
+              and Photo fascinate me and allow me to visualize myself within the
+              message , within the vision.
             </p>
           </div>
         </div>
