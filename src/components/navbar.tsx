@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed z-50 w-full">
-        <div className="mx-auto flex max-w-[1400px] flex-wrap items-start justify-between bg-transparent pt-4 max-xl:px-2">
+        <div className="mx-auto flex flex-wrap items-start justify-between bg-transparent pt-4 max-xl:px-2 xl:px-6">
           {!isNoLogoPage ? (
             <Link href={'/'}>
               <div className="relative ml-2 h-8 w-[116px] bg-transparent">

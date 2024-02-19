@@ -67,14 +67,14 @@ export default function Grid3Images() {
   return (
     <>
       <div className="px-4">
-        <div className="my-8 grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
           {clientWorks.map((data, key) => (
             <Link
               key={key}
               href={`?client=${data.slug}`}
               onMouseEnter={() => handleMouseEnter(data.slug)}
               onMouseLeave={() => handleMouseLeave(data.slug)}
-              className="group flex max-h-[300px] cursor-pointer items-center justify-center overflow-hidden bg-slate-100"
+              className="group flex max-h-[500px] cursor-pointer items-center justify-center overflow-hidden bg-slate-100"
             >
               {data.slug === hoveredSlug ? (
                 <div
@@ -83,8 +83,8 @@ export default function Grid3Images() {
                     isCoverHovered && 'flex',
                   )}
                 >
-                  {isVideoLoading && (
-                    <Skeleton className="h-[300px] w-full bg-gray-200 " />
+                  {isVideoLoading && data.videoCover && (
+                    <Skeleton className="h-[500px] w-full bg-gray-200 " />
                   )}
                   {data.videoCover ? (
                     <motion.video
@@ -109,9 +109,9 @@ export default function Grid3Images() {
                     <motion.div
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.6 }}
-                      className="flex h-[400px] w-full items-center justify-center "
+                      className="flex h-[500px] w-full items-center justify-center "
                     >
-                      <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.2]">
+                      <Avatar className="h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.2]">
                         <AvatarImage
                           className="object-cover"
                           src={data.cover}
@@ -130,7 +130,7 @@ export default function Grid3Images() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.6 }}
-                  className="flex h-[400px] w-full items-center justify-center "
+                  className="flex h-[500px] w-full items-center justify-center "
                 >
                   <Avatar className=" h-full w-full overflow-hidden rounded-none duration-1000 ease-out hover:scale-[1.1]">
                     <AvatarImage

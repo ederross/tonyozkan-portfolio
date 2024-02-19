@@ -47,6 +47,7 @@ export default function Footer() {
             <span className="text-sm font-semibold">CONNECT</span>
             <Link
               href={'https://www.instagram.com/tonyozkan/reels/'}
+              target="_blank"
               className="w-full"
             >
               <Button className="h-20 w-full border border-black text-lg font-medium text-black">
@@ -55,6 +56,7 @@ export default function Footer() {
             </Link>
             <Link
               href={'https://www.tiktok.com/@tonyozkan?lang=en'}
+              target="_blank"
               className="w-full"
             >
               <Button className="h-20 w-full border border-black text-lg font-medium text-black">
@@ -64,19 +66,32 @@ export default function Footer() {
                     fill
                     style={{ objectFit: 'contain' }}
                     alt="NextUI hero Image"
-                    src="/assets/tiktok.png"
+                    src="/assets/tiktok.svg"
                   />
                 </div>
               </Button>
             </Link>
+
             <Link
               href={'https://www.tiktok.com/@tonyozkan?lang=en'}
-              className="w-full"
+              className="mb-10 w-full"
             >
               <Button className="w-full gap-2 border border-primary-400 py-8 uppercase text-primary-600 underline">
                 Get In Contact <ArrowUpRight size={16} />
               </Button>
             </Link>
+            <div className="w-full text-center">
+              <span className=" text-center text-sm text-gray-500 dark:text-gray-400">
+                © 2024{' '}
+                <a
+                  href="https://twitter.com/thisross"
+                  className="hover:underline"
+                >
+                  Eder Rosa
+                </a>
+                . All Rights Reserved.
+              </span>
+            </div>
           </div>
         </div>
 
@@ -125,7 +140,8 @@ export default function Footer() {
                 <ul className="font-medium text-gray-500 dark:text-gray-400">
                   <li className="mb-4">
                     <a
-                      href="https://github.com/themesberg/flowbite"
+                      href="https://www.instagram.com/tonyozkan/"
+                      target="_blank"
                       className="hover:underline "
                     >
                       Instagram
@@ -133,7 +149,8 @@ export default function Footer() {
                   </li>
                   <li>
                     <a
-                      href="https://discord.gg/4eeurUVvTy"
+                      href="https://www.tiktok.com/@tonyozkan?lang=en"
+                      target="_blank"
                       className="hover:underline"
                     >
                       Tiktok
@@ -152,17 +169,31 @@ export default function Footer() {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-gray-500 dark:text-gray-400 sm:text-center">
               © 2024{' '}
-              <a href="https://flowbite.com/" className="hover:underline">
-                Tony Ozkan
+              <a
+                href="https://twitter.com/thisross"
+                className="hover:underline"
+              >
+                Eder Rosa
               </a>
               . All Rights Reserved.
             </span>
             <div className="mt-4 flex space-x-5 sm:mt-0 sm:justify-center">
               <Link
-                href="#"
+                href="https://www.instagram.com/tonyozkan"
+                target="_blank"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
                 <Instagram />
+                <span className="sr-only">Instagram</span>
+              </Link>
+              <Link
+                href="https://www.tiktok.com/@tonyozkan?lang=en"
+                target="_blank"
+                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              >
+                <div className="relative h-[24px] w-[24px] overflow-hidden">
+                  <Image src={'/assets/tiktok.svg'} fill alt="tiktok logo" />
+                </div>
                 <span className="sr-only">Instagram</span>
               </Link>
             </div>
