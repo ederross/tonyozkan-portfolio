@@ -74,7 +74,7 @@ export default function Grid3Images() {
               href={`?client=${data.slug}`}
               onMouseEnter={() => handleMouseEnter(data.slug)}
               onMouseLeave={() => handleMouseLeave(data.slug)}
-              className="group flex max-h-[500px] cursor-pointer items-center justify-center overflow-hidden bg-slate-100"
+              className="group flex max-h-[500px] cursor-pointer flex-col items-start justify-center gap-1 overflow-hidden bg-slate-100"
             >
               {data.slug === hoveredSlug ? (
                 <div
@@ -145,10 +145,12 @@ export default function Grid3Images() {
                   </Avatar>
                 </motion.div>
               )}
+              <span>{data.name}</span>
             </Link>
           ))}
         </div>
       </div>
+
       {selectedClientURL && (
         <ClientDetails
           selectedClient={selectedClientURL as IClientWork}
