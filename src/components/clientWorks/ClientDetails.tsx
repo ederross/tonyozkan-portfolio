@@ -14,6 +14,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view'
 import 'react-photo-view/dist/react-photo-view.css'
 import { useMediaQuery } from 'usehooks-ts'
 import { Skeleton } from '../ui/skeleton'
+import YouTube from 'react-youtube'
 
 interface Client {
   name: string
@@ -21,6 +22,7 @@ interface Client {
   cover: string
   videoCover?: string
   videos?: string[]
+  youtubeVideos?: string[]
 }
 
 interface Props {
@@ -77,6 +79,7 @@ export default function ClientDetails({
                   </div>
                 </>
               )}
+
               <motion.video
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -104,6 +107,32 @@ export default function ClientDetails({
                   <Volume2 size={20} className="text-slate-500" />
                 )}
               </div>
+            </div>
+          )}
+          {selectedClient.youtubeVideos?.length === 1 && (
+            <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden bg-gray-200">
+              {/* {isVideoLoading && (
+                <>
+                  <div className="flex flex-col items-center gap-2">
+                    <Loader2 className="animate-spin text-gray-400" />
+                  </div>
+                </>
+              )} */}
+
+              <YouTube
+                videoId={selectedClient.youtubeVideos[0]}
+                className="h-[500px] w-[1000px]"
+                opts={{
+                  width: '100%',
+                  height: 500,
+                  playerVars: {
+                    autoplay: 0,
+                  },
+                }}
+                onReady={(event: any) => {
+                  event.target.pauseVideo()
+                }}
+              />
             </div>
           )}
           <PhotoProvider>
