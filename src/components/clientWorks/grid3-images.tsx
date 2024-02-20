@@ -67,14 +67,14 @@ export default function Grid3Images() {
   return (
     <>
       <div className="px-4">
-        <div className="my-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
+        <div className="my-8 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:gap-12">
           {clientWorks.map((data, key) => (
             <Link
               key={key}
               href={`?client=${data.slug}`}
               onMouseEnter={() => handleMouseEnter(data.slug)}
               onMouseLeave={() => handleMouseLeave(data.slug)}
-              className="group flex max-h-[500px] cursor-pointer flex-col items-start justify-center gap-1 overflow-hidden bg-slate-100"
+              className="group flex max-h-[600px] cursor-pointer flex-col items-start justify-center gap-1 overflow-hidden bg-slate-100"
             >
               {data.slug === hoveredSlug ? (
                 <div
