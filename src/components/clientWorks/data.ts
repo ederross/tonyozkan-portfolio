@@ -4,6 +4,7 @@ export const clientWorks = [
     name: 'Jcrew',
     cover:
       'https://utfs.io/f/77fa1819-eb9c-42a3-9ca3-8ba25b4b92bf-dgdkbu.16.32.png',
+    videoCover: '/assets/videos/jcrewgif.mp4',
     images: [
       'https://utfs.io/f/79a11c61-3d90-4396-b899-5e69920eb0ca-dgdkbu.20.24.png',
       'https://utfs.io/f/4918c85c-3ce9-47b1-bc40-81cbe2ed6435-dgdkbu.21.01.png',
