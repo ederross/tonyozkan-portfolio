@@ -46,6 +46,15 @@ export const clientWorks = [
     videos: [],
   },
   {
+    slug: 'paige',
+    name: 'Paige',
+    cover: 'https://utfs.io/f/39e36f6b-4f81-4de8-b566-bbb87dec4d03-k48m5a.png',
+    videoCover: '/assets/videos/paigegif.mp4',
+    images: [],
+    videos: [],
+    youtubeVideos: ['USu2GAuPHeY'],
+  },
+  {
     slug: 'bonobos',
     name: 'Bonobos',
     cover: 'https://utfs.io/f/720caa3b-1dfd-47e1-b13a-7d72e3f97fbe-jz0tgh.png',
@@ -54,6 +63,7 @@ export const clientWorks = [
     videos: [],
     youtubeVideos: ['a8oHKvdHipQ'],
   },
+
   {
     slug: 'farfetch',
     name: 'Farfetch',
