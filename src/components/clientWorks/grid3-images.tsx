@@ -88,7 +88,7 @@ export default function Grid3Images() {
                   )}
 
                   {data.videoCover ? (
-                    <div className="h-[500px] overflow-hidden">
+                    <div className="flex h-[500px] items-center justify-center overflow-hidden">
                       <motion.video
                         transition={{ duration: 1000 }}
                         className={cn(

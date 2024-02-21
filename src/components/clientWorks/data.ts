@@ -46,6 +46,15 @@ export const clientWorks = [
     videos: [],
   },
   {
+    slug: 'bonobos',
+    name: 'Bonobos',
+    cover: 'https://utfs.io/f/720caa3b-1dfd-47e1-b13a-7d72e3f97fbe-jz0tgh.png',
+    videoCover: '/assets/videos/bonobos-gif.mp4',
+    images: [],
+    videos: [],
+    youtubeVideos: ['a8oHKvdHipQ'],
+  },
+  {
     slug: 'farfetch',
     name: 'Farfetch',
     cover: 'https://utfs.io/f/71bdd7cc-9413-4541-8361-9fd3c65c9fee-k4chj0.png',
