@@ -86,25 +86,28 @@ export default function Grid3Images() {
                   {isVideoLoading && data.videoCover && (
                     <Skeleton className="h-[500px] w-full bg-gray-200 " />
                   )}
+
                   {data.videoCover ? (
-                    <motion.video
-                      transition={{ duration: 1000 }}
-                      className={cn(
-                        'scale-150 overflow-hidden object-cover',
-                        isVideoLoading ? 'w-0' : 'w-full',
-                      )}
-                      autoPlay
-                      loop
-                      muted
-                      onLoadedData={handleLoadedData}
-                      preload={'metadata'}
-                      onCanPlay={handleCanPlay}
-                      onWaiting={handleWaiting}
-                      controls={false}
-                    >
-                      <source src={data.videoCover} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </motion.video>
+                    <div className="h-[500px] overflow-hidden">
+                      <motion.video
+                        transition={{ duration: 1000 }}
+                        className={cn(
+                          'overflow-hidden',
+                          isVideoLoading ? 'w-0' : 'w-full',
+                        )}
+                        autoPlay
+                        loop
+                        muted
+                        onLoadedData={handleLoadedData}
+                        preload={'metadata'}
+                        onCanPlay={handleCanPlay}
+                        onWaiting={handleWaiting}
+                        controls={false}
+                      >
+                        <source src={data.videoCover} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </motion.video>
+                    </div>
                   ) : (
                     <motion.div
                       animate={{ opacity: 1 }}

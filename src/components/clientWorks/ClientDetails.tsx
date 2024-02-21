@@ -70,7 +70,7 @@ export default function ClientDetails({
               </button>
             </Link>
           </div>
-          {selectedClient.videos?.length === 1 && (
+          {selectedClient.videos && selectedClient.videos?.length > 0 && (
             <div className="m-auto mt-20 flex w-full max-w-[1000px] flex-col items-center space-y-6 overflow-hidden">
               {isVideoLoading && (
                 <>
@@ -80,24 +80,27 @@ export default function ClientDetails({
                 </>
               )}
 
-              <motion.video
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="h-[500px] bg-transparent sm:h-[500px]"
-                style={{ width: '100%' }}
-                autoPlay
-                controls={isMobile}
-                loop
-                muted={isMuted}
-                onLoadedData={handleLoadedData}
-                onCanPlay={handleCanPlay}
-                onWaiting={handleWaiting}
-              >
-                <source src={selectedClient.videos[0]} type="video/mp4" />
-              </motion.video>
+              {selectedClient.videos.map((data, index) => (
+                <motion.video
+                  key={index}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="h-[500px] bg-transparent object-contain sm:h-[500px]"
+                  style={{ width: '100%' }}
+                  autoPlay
+                  controls={true}
+                  loop
+                  muted={isMuted}
+                  onLoadedData={handleLoadedData}
+                  onCanPlay={handleCanPlay}
+                  onWaiting={handleWaiting}
+                >
+                  <source src={data} type="video/mp4" />
+                </motion.video>
+              ))}
 
-              <div
+              {/* <div
                 onClick={() => setIsMuted(!isMuted)}
                 className="hidden h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border bg-slate-50 lg:flex"
               >
@@ -106,7 +109,7 @@ export default function ClientDetails({
                 ) : (
                   <Volume2 size={20} className="text-slate-500" />
                 )}
-              </div>
+              </div> */}
             </div>
           )}
           {selectedClient.youtubeVideos?.length === 1 && (
@@ -119,20 +122,22 @@ export default function ClientDetails({
                 </>
               )} */}
 
-              <YouTube
-                videoId={selectedClient.youtubeVideos[0]}
-                className="h-[500px] w-[1000px]"
-                opts={{
-                  width: '100%',
-                  height: 500,
-                  playerVars: {
-                    autoplay: 0,
-                  },
-                }}
-                onReady={(event: any) => {
-                  event.target.pauseVideo()
-                }}
-              />
+              <div className="h-[500px] w-full bg-slate-50">
+                <YouTube
+                  videoId={selectedClient.youtubeVideos[0]}
+                  className="h-[400px]"
+                  opts={{
+                    width: '100%',
+                    height: 500,
+                    playerVars: {
+                      autoplay: 0,
+                    },
+                  }}
+                  onReady={(event: any) => {
+                    event.target.pauseVideo()
+                  }}
+                />
+              </div>
             </div>
           )}
           <PhotoProvider>
