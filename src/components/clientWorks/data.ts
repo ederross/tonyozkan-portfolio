@@ -1,5 +1,14 @@
 export const clientWorks = [
   {
+    slug: 'motorola',
+    name: 'Motorola',
+    cover: 'https://utfs.io/f/e87c56b3-a86e-4f93-809c-daa1674e92be-k4cjpe.png',
+    videoCover: '/assets/videos/motorolagif.mp4',
+    images: [],
+    videos: [],
+    youtubeVideos: ['p-ek1y-pkKw'],
+  },
+  {
     slug: 'jcrew',
     name: 'Jcrew',
     cover:
