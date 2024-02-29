@@ -2,7 +2,7 @@ export const clientWorks = [
   {
     slug: 'motorola',
     name: 'Motorola',
-    cover: 'https://utfs.io/f/e87c56b3-a86e-4f93-809c-daa1674e92be-k4cjpe.png',
+    cover: 'https://utfs.io/f/97b684f7-35c0-48f1-bc81-b59418e2386e-k4bw5u.png',
     videoCover: '/assets/videos/motorolagif.mp4',
     images: [],
     videos: [],
@@ -12,7 +12,7 @@ export const clientWorks = [
     slug: 'jcrew',
     name: 'Jcrew',
     cover:
-      'https://utfs.io/f/77fa1819-eb9c-42a3-9ca3-8ba25b4b92bf-dgdkbu.16.32.png',
+      'https://utfs.io/f/e3a4d2bc-d86b-4e43-a996-82474816f094-dgdkbu.19.41.png',
     videoCover: '/assets/videos/jcrewgif.mp4',
     images: [
       'https://utfs.io/f/79a11c61-3d90-4396-b899-5e69920eb0ca-dgdkbu.20.24.png',
@@ -58,7 +58,7 @@ export const clientWorks = [
   {
     slug: 'paige',
     name: 'Paige',
-    cover: 'https://utfs.io/f/39e36f6b-4f81-4de8-b566-bbb87dec4d03-k48m5a.png',
+    cover: 'https://utfs.io/f/20ff9121-2eef-4bbb-b40a-b8b75c3738d7-e7tkop.jpg',
     videoCover: '/assets/videos/paigegif.mp4',
     images: [],
     videos: [],
@@ -67,7 +67,7 @@ export const clientWorks = [
   {
     slug: 'bonobos',
     name: 'Bonobos',
-    cover: 'https://utfs.io/f/720caa3b-1dfd-47e1-b13a-7d72e3f97fbe-jz0tgh.png',
+    cover: 'https://utfs.io/f/abdb3206-3042-46b2-8aa6-e9308bf2ae6a-nkmaoq.jpg',
     videoCover: '/assets/videos/bonobos-gif.mp4',
     images: [],
     videos: [],
@@ -77,7 +77,7 @@ export const clientWorks = [
   {
     slug: 'farfetch',
     name: 'Farfetch',
-    cover: 'https://utfs.io/f/71bdd7cc-9413-4541-8361-9fd3c65c9fee-k4chj0.png',
+    cover: 'https://utfs.io/f/d05858b1-9ddb-47ef-b1a1-09df489fc4a2-23vla.jpg',
     videoCover: '/assets/videos/farf.mp4',
     images: [],
     videos: ['/assets/videos/film.mp4', '/assets/videos/farf.mp4'],
